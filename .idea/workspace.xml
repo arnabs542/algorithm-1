@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9377cc73-4c76-474c-8d1c-4d8b96f061ba" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/binarySearch/62_SearchInRotatedSortedArray.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -14,7 +15,18 @@
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="62_SearchInRotatedSortedArray.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/binarySearch/62_SearchInRotatedSortedArray.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="105">
+              <caret line="7" column="19" lean-forward="true" selection-start-line="7" selection-start-column="19" selection-end-line="7" selection-end-column="19" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -37,8 +49,8 @@
         <option value="$PROJECT_DIR$/src/strStr.java" />
         <option value="$PROJECT_DIR$/src/binarySearch/closestnumber.java" />
         <option value="$PROJECT_DIR$/src/binarySearch/28_SearchA2DMatrix.java" />
-        <option value="$PROJECT_DIR$/src/binarySearch/s.java" />
         <option value="$PROJECT_DIR$/src/binarySearch/FindPeakElement.java" />
+        <option value="$PROJECT_DIR$/src/binarySearch/s.java" />
       </list>
     </option>
   </component>
@@ -671,7 +683,7 @@
       <option name="presentableId" value="Default" />
       <updated>1497822794324</updated>
       <workItem from="1497822800695" duration="1881000" />
-      <workItem from="1497826012875" duration="2140000" />
+      <workItem from="1497826012875" duration="2412000" />
     </task>
     <task id="LOCAL-00001" summary="add new files">
       <created>1497826843611</created>
@@ -712,7 +724,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="4021000" />
+    <option name="totallyTimeSpent" value="4293000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="628" y="23" width="1260" height="709" extended-state="0" />
@@ -877,6 +889,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="405">
           <caret line="27" column="5" lean-forward="false" selection-start-line="27" selection-start-column="5" selection-end-line="27" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/binarySearch/62_SearchInRotatedSortedArray.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="19" lean-forward="true" selection-start-line="7" selection-start-column="19" selection-end-line="7" selection-end-column="19" />
           <folding />
         </state>
       </provider>
