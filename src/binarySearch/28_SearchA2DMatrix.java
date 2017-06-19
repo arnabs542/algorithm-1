@@ -1,6 +1,6 @@
 package binarySearch;
 
-public class Solution {
+public class searchMatrix {
     /**
      * @param matrix, a list of lists of integers
      * @param target, an integer
