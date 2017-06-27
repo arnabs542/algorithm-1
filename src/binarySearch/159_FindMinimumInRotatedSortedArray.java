@@ -1,6 +1,6 @@
 package binarySearch;
 
-public class Solution {
+public class SearchA2DMatrix {
     /**
      * @param nums: a rotated sorted array
      * @return: the minimum number in the array
