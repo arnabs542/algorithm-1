@@ -1,4 +1,5 @@
 class Solution {
+    
     public List<List<Integer>> permuteUnique(int[] nums) {
         List<List<Integer>> result = new ArrayList<>();
         List<Integer> temp = new ArrayList<Integer>();
@@ -24,6 +25,8 @@ class Solution {
         , boolean[] visited){
             
             if (temp.size() == nums.length){
+                // will nee to optimize this
+                // O(n)
                 if (!result.contains(new ArrayList(temp))){
                     result.add(new ArrayList<Integer>(temp));
                 }
