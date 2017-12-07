@@ -11,9 +11,9 @@ public class Solution {
         }
         
         Arrays.sort(num);
-        int[] candidates = removeDuplicates(num);
+        //int[] candidates = removeDuplicates(num);
 
-        dfs(candidates, target, new ArrayList<Integer>(), result, target, 0);
+        dfs(num, target, new ArrayList<Integer>(), result, target, 0);
         
         return result;    
         
@@ -47,6 +47,9 @@ public class Solution {
       ){
     
         if (remaining == 0){
+            if (result.contains(temp)){
+                return;
+            }
         	result.add(new ArrayList<Integer>(temp));
           	return;
         }
