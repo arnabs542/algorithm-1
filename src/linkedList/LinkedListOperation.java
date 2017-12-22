@@ -18,7 +18,8 @@ public class LinkedListOperation
     l1.next = l2;
     l2.next = l3;
 
-    //System.out.println(size(l1));
+    reverse(l1);
+    //System.out.println(l1.print());
 
   }  
   
@@ -31,6 +32,32 @@ public class LinkedListOperation
     }
         
     return size(node.next) + 1;
+  }
+  
+  public static void reverse(ListNode node){
+    
+    ListNode head = new ListNode(0);
+    ListNode curr = null;
+	ListNode temp = null;
+    
+    if (node.next == null)
+    {
+    	return;
+    }
+    
+    head.next = node;
+   	curr = node;
+        
+    while(curr.next != null){
+	    temp = curr.next;
+    
+    	curr.next = curr.next.next;
+        temp.next = head.next;
+    	head.next = temp;
+    }
+    
+    ListNodeUtility.print(head.next);
+
   }
   
 }
@@ -46,4 +73,17 @@ public class ListNode
     this.next = null;
   }
   
+}
+
+public class ListNodeUtility{
+	
+  public static void print(ListNode node){
+    System.out.println("->" + node.val);
+    
+    if (node.next == null){
+    	return;
+    }else{
+        print(node.next);
+    }
+  }
 }
