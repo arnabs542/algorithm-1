@@ -34,7 +34,12 @@ public class LinkedListOperation
     // (2 pointers, first pointer moves K steps first, then first and 2nd pointers move in the same speed.)
     // ListNode result = reGetKthNode(l1, 5);
     // System.out.println((result == null? -99: result.val));
-
+    
+    // 4. Get the middle node of the linked list 
+    // (2 pointers, first pointer moves 2 steps, 2nd pointer moves 1 step at a time.)
+    // ListNode result = reGetKthNode(l1, 5);
+    // System.out.println((result == null? -99: result.val));	  
+	
   }  
   
   public static int size(ListNode node){
@@ -113,6 +118,19 @@ public static ListNode reGetKthNode(ListNode node, int k){
     	return node;
     }
   }
+	
+   public static ListNode GetMiddleNode(ListNode node){   
+    ListNode fast = node;
+    ListNode slow = node;
+    
+    while(fast != null && fast.next != null && fast.next.next != null){
+    	fast = fast.next.next;
+        slow = slow.next;
+    }
+    
+    return slow;
+  }
+  
   
 }
 
