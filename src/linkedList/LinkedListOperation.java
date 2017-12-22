@@ -18,8 +18,22 @@ public class LinkedListOperation
     l1.next = l2;
     l2.next = l3;
 
-    reverse(l1);
-    //System.out.println(l1.print());
+    // 1. get number of node for the linked list 
+    // size() 
+	  
+    // 2. reverse a linked list 
+    // reverse(l1);
+    // System.out.println(l1.print());
+	
+	  
+    // 3. Get the Kth node
+    // ListNode result = GetKthNode(l1, 3);
+    // System.out.println(result.val);
+
+    // 4. Get the Kth node from last 
+    // (2 pointers, first pointer moves K steps first, then first and 2nd pointers move in the same speed.)
+    // ListNode result = reGetKthNode(l1, 5);
+    // System.out.println((result == null? -99: result.val));
 
   }  
   
@@ -58,6 +72,46 @@ public class LinkedListOperation
     
     ListNodeUtility.print(head.next);
 
+  }
+	
+	
+  public static ListNode GetKthNode(ListNode node, int k){    
+    ListNode head = new ListNode(0);
+    head.next = node;
+    
+    for (int i = 1; i <= k; i ++){
+      if (head.next != null){
+        head = head.next;
+      } else{
+      	return null;
+      }
+    }
+    
+    return head;
+  }
+	
+public static ListNode reGetKthNode(ListNode node, int k){   
+    int p1 = 0;
+    int p2 = 0;
+    
+    ListNode head = new ListNode(0);
+    head.next = node;
+        
+    while(head.next != null){
+    	head = head.next;
+      	p1++;
+      
+      if (p1 > k){
+        node = node.next;
+      	p2 ++;
+      }
+    }
+    
+    if (k > p1){
+    	return null;
+    }else{
+    	return node;
+    }
   }
   
 }
