@@ -37,7 +37,7 @@ public class LinkedListOperation
     
     // 4. Get the middle node of the linked list 
     // (2 pointers, first pointer moves 2 steps, 2nd pointer moves 1 step at a time.)
-    // ListNode result = reGetKthNode(l1, 5);
+    // ListNode result = GetMiddleNode(l1);
     // System.out.println((result == null? -99: result.val));	  
 	
   }  
