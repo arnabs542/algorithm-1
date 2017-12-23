@@ -38,7 +38,15 @@ public class LinkedListOperation
     // 4. Get the middle node of the linked list 
     // (2 pointers, first pointer moves 2 steps, 2nd pointer moves 1 step at a time.)
     // ListNode result = GetMiddleNode(l1);
-    // System.out.println((result == null? -99: result.val));	  
+    // System.out.println((result == null? -99: result.val));	 
+	  
+    // 5. Merge 2 sorted linked list 
+    // ListNode result = GetMiddleNode(l1);
+    // System.out.println((result == null? -99: result.val));	
+	  
+    // 6. Has Cycle
+    // boolean result = hasCycle(l1);
+    // System.out.println(result);
 	
   }  
   
@@ -131,7 +139,48 @@ public static ListNode reGetKthNode(ListNode node, int k){
     return slow;
   }
   
+public static ListNode MergeSortedLinkList(ListNode A, ListNode B){   
+    
+    ListNode head = new ListNode(0);
+    ListNode curr = head;
+        
+    while(A != null && B !=null){
+      if (A.val < B.val){
+      	curr.next = A;
+        A = A.next;
+      }else{
+      	curr.next = B;
+        B = B.next;
+      }
+      
+      curr = curr.next;
+    }
+    
+    if (A != null){
+      curr.next = A;
+    }else{
+      curr.next = B;
+    }
+    
+    return head.next;
+  }
   
+public static boolean hasCycle(ListNode l1){
+	ListNode fast = l1;
+  	ListNode slow = l1;
+    
+  	while (fast != null && slow !=null){
+    		fast = fast.next.next;
+        	slow = slow.next;
+      		if(slow == fast){
+      			return true;
+      		}
+    	}
+    
+    	return false;
+  }
+	
+	
 }
 
 // you can add other public classes to this editor in any order
