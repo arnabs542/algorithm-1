@@ -45,6 +45,7 @@ public class LinkedListOperation
     // System.out.println((result == null? -99: result.val));	
 	  
     // 6. Has Cycle
+    // (2 pointers meet => has cycle)
     // boolean result = hasCycle(l1);
     // System.out.println(result);
 	
