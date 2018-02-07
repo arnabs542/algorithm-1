@@ -167,20 +167,23 @@ public static ListNode MergeSortedLinkList(ListNode A, ListNode B){
     return head.next;
   }
   
-public static boolean hasCycle(ListNode l1){
-	ListNode fast = l1;
-  	ListNode slow = l1;
-    
-  	while (fast != null && slow !=null){
-    		fast = fast.next.next;
-        	slow = slow.next;
-      		if(slow == fast){
-      			return true;
-      		}
-    	}
-    
-    	return false;
-  }
+public boolean hasCycle(ListNode head) {  
+        if (head == null || head.next == null){
+            return false;
+        }
+        
+        ListNode fast = head.next;
+        ListNode slow = head;
+            
+        while(fast != slow){
+            if (fast == null || fast.next == null) return false;
+
+            fast = fast.next.next;
+            slow = slow.next;
+        }
+        
+        return true;
+    }
 	
 	
 }
