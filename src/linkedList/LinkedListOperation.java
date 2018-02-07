@@ -63,31 +63,18 @@ public class LinkedListOperation
     return size(node.next) + 1;
   }
   
-  public static void reverse(ListNode node){
-    
-    ListNode head = new ListNode(0);
-    ListNode curr = null;
-	ListNode temp = null;
-    
-    if (node.next == null)
-    {
-    	return;
+public ListNode reverse(ListNode head) {
+       ListNode dummy = null;
+       while(head != null){
+           ListNode temp = head.next;
+           head.next = dummy;
+           dummy = head;
+           head = temp;
+       }
+       
+       return dummy; 
     }
-    
-    head.next = node;
-   	curr = node;
-        
-    while(curr.next != null){
-	    temp = curr.next;
-    
-    	curr.next = curr.next.next;
-        temp.next = head.next;
-    	head.next = temp;
-    }
-    
-    ListNodeUtility.print(head.next);
-
-  }
+}
 	
 	
   public static ListNode GetKthNode(ListNode node, int k){    
