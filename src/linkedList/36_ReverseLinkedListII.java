@@ -20,6 +20,8 @@ public class Solution {
         if (n <= m || head == null){
             return head;
         }
+        
+        // add dummy node to handle special case when m = 1
         ListNode dummy = new ListNode(0);
         dummy.next = head;
         head = dummy;
