@@ -16,6 +16,7 @@ public class Solution {
                     using constant space complexity.
      */
     public ListNode sortList(ListNode head) {  
+        // **
         if (head == null || head.next == null){
             return head;
         }
@@ -31,6 +32,7 @@ public class Solution {
         ListNode slow = head;
         ListNode fast = head.next;
         
+        // **
         while (fast != null && fast.next != null){
             slow = slow.next;
             fast = fast.next.next;
