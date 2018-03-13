@@ -14,7 +14,7 @@ public class Solution {
      */
     public ArrayList<DirectedGraphNode> topSort(ArrayList<DirectedGraphNode> graph) {
         ArrayList<DirectedGraphNode> result = new ArrayList<DirectedGraphNode>();
-        // save all the neighbors to map; and get their count
+        // create a map for <node, count # pointers to the node>
         HashMap<DirectedGraphNode, Integer> map = new HashMap<DirectedGraphNode, Integer>();
         for (DirectedGraphNode node: graph){
             for (DirectedGraphNode neighborNode: node.neighbors){
@@ -26,7 +26,8 @@ public class Solution {
             }
         }
         
-        // have start node in the queue
+        // if the node doesn't exist in map, then it's a start node
+        // offer start node in the queue
         Queue<DirectedGraphNode> q = new LinkedList<DirectedGraphNode>();
         for (DirectedGraphNode node: graph){
             if (!map.containsKey(node)){
