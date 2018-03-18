@@ -163,6 +163,8 @@ public boolean hasCycle(ListNode head) {
         ListNode slow = head;
             
         while(fast != slow){
+	
+		//!!!!! caution !!!! 
             if (fast == null || fast.next == null) return false;
 
             fast = fast.next.next;
