@@ -64,15 +64,21 @@ public class LinkedListOperation
   }
   
 public ListNode reverse(ListNode head) {
-       ListNode dummy = null;
-       while(head != null){
-           ListNode temp = head.next;
-           head.next = dummy;
-           dummy = head;
-           head = temp;
-       }
-       
-       return dummy; 
+       if (head == null || head.next == null){
+            return head;
+        }
+        
+        ListNode current = head; 
+        ListNode prev = null;
+        
+        while (current != null){
+            ListNode temp = current.next;
+            current.next = prev;
+            prev = current;
+            current = temp;
+        }
+        
+        return prev;
     }
 }
 	
