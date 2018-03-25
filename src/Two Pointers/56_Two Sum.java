@@ -1,3 +1,7 @@
+// 兩種方法
+// 1. hashmap O(n)
+// 2. two pointers O(nlogn) 
+
 public class Solution {
     /*
      * @param numbers: An array of Integer
