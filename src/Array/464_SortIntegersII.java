@@ -21,6 +21,8 @@ public class Solution {
         int right = end;
         while (left <= right){
             
+            // left <= right; "=" 為了錯開指針
+            // A[left] < mid; no "=" 為了讓左右可以分配平均一點; "=" 的情況可以交換
             while (left <= right && A[left] < mid){
                 left ++;
             }
