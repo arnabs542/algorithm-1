@@ -12,3 +12,28 @@
             }
         }
     }
+
+
+public class Solution {
+    /**
+     * @param nums: an integer array
+     * @return: nothing
+     */
+    public void moveZeroes(int[] nums) {
+        if (nums == null || nums.length == 0){
+            return;
+        }
+        int index0 = 0;
+        
+        for (int j = 0; j < nums.length; j ++){
+            if (nums[j] != 0){
+                nums[index0] = nums[j];
+                index0 ++;
+            }
+        }
+        
+        for (int i = index0; i < nums.length; i ++){
+            nums[i] = 0;
+        }
+    }
+}
