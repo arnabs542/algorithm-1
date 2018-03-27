@@ -15,10 +15,7 @@
 
 
 public class Solution {
-    /**
-     * @param nums: an integer array
-     * @return: nothing
-     */
+    // 把非0的都移到左邊, 剩下補0
     public void moveZeroes(int[] nums) {
         if (nums == null || nums.length == 0){
             return;
