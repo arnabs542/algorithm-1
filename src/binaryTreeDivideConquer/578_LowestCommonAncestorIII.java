@@ -1,59 +1,50 @@
-package binaryTreeDivideConquer;
-
 /**
- * Created by epingho on 2017/7/4.
+ * Definition of TreeNode:
+ * public class TreeNode {
+ *     public int val;
+ *     public TreeNode left, right;
+ *     public TreeNode(int val) {
+ *         this.val = val;
+ *         this.left = this.right = null;
+ *     }
+ * }
  */
-
-class Result {
-    boolean a_exists;
-    boolean b_exists;
-    TreeNode node;
-    public Result(boolean a_exists, boolean b_exists, TreeNode node){
-        this.a_exists = a_exists;
-        this.b_exists = b_exists;
-        this.node = node;
+class ResultType{
+    public boolean a_exist;
+    public boolean b_exist;
+    public ResultType(boolean a, boolean b){
+        this.a_exist = a;
+        this.b_exist = b;
     }
+
 }
 
-public class LowestCommonAncestorIII {
-    public TreeNode lowestCommonAncestor3(TreeNode root, TreeNode A, TreeNode B)
-    {
-        Result lowestCommonAncestorResult = helper(root, A, B);
-
-        if (lowestCommonAncestorResult.a_exists && lowestCommonAncestorResult.b_exists){
-            return lowestCommonAncestorResult.node;
-        }else{
-            return null;
-        }
+public class Solution {
+    
+    public TreeNode LCA = null;
+    
+    public TreeNode lowestCommonAncestor3(TreeNode root, TreeNode A, TreeNode B) {
+        helper(root, A, B);
+        return LCA;
     }
-
-    public Result helper(TreeNode root, TreeNode A, TreeNode B){
+    
+    private ResultType helper(TreeNode root, TreeNode A, TreeNode B){
         if (root == null){
-            return new Result(false, false, null);
+            return new ResultType(false, false);
         }
-
-        Result result_A = helper(root.left, A, B);
-        Result result_B = helper(root.right, A, B);
-
-        boolean a_exists = (root == A || result_A.a_exists || result_B.a_exists);
-        boolean b_exists = (root == B || result_A.b_exists || result_B.b_exists);
-
-        if (root == A || root == B){
-            return new Result(a_exists, b_exists, root);
+        
+        ResultType leftResult = helper(root.left, A, B);
+        ResultType rightResult = helper(root.right, A, B);
+        ResultType result = new ResultType(false, false);
+        
+        result.a_exist = (leftResult.a_exist || rightResult.a_exist || root == A);
+        result.b_exist = (leftResult.b_exist || rightResult.b_exist || root == B);
+        
+        if (LCA == null && result.a_exist && result.b_exist){
+            LCA = root;
         }
-        if (result_A.node != null && result_B.node != null){
-            return new Result(a_exists, b_exists, root);
-        }
-
-        if (result_A.node != null){
-            return new Result(a_exists, b_exists, result_A.node);
-        }
-
-        if (result_B.node != null){
-            return new Result(a_exists, b_exists, result_B.node);
-        }
-
-        return new Result(a_exists, b_exists, null);
+        
+        return result;
 
     }
 }
