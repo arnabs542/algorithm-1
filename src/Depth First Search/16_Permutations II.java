@@ -1,52 +1,49 @@
-class Solution {
-    
+public class Solution {
+    /*
+     * @param :  A list of integers
+     * @return: A list of unique permutations
+     */
     public List<List<Integer>> permuteUnique(int[] nums) {
         List<List<Integer>> result = new ArrayList<>();
-        List<Integer> temp = new ArrayList<Integer>();
-        
-        if (nums == null || nums.length == 0){
-            result.add(temp);
+        if (nums == null){
             return result;
         }
         
+        List<Integer> subset = new ArrayList<>();
+        Arrays.sort(nums); 
+        
         boolean[] visited = new boolean[nums.length];
         Arrays.fill(visited, false);
-        Arrays.sort(nums);
-        helper(nums, result, temp, visited);
+        permutationHelper(nums, result, subset, visited);
         
         return result;
+        
     }
     
-    
-    private void helper(
-        int[] nums
-        , List<List<Integer>> result
-        , List<Integer> temp
-        , boolean[] visited){
-            
-            if (temp.size() == nums.length){
-                // will nee to optimize this
-                // O(n)
-                if (!result.contains(new ArrayList(temp))){
-                    result.add(new ArrayList<Integer>(temp));
-                }
-                return; 
+    private void permutationHelper(int[] nums
+                                    , List<List<Integer>> result
+                                    , List<Integer> subset
+                                    , boolean[] visited){
+        if (subset.size() == nums.length){
+            result.add(new ArrayList<Integer>(subset));
+            return;
+        }
+        
+        for (int i = 0; i < nums.length; i ++){
+            if (visited[i]){
+                continue;
             }
             
-            for (int i = 0; i < nums.length; i ++){
-                if(visited[i] == true)   {
-                    continue;
-                }
-                
-                visited[i] = true;
-                temp.add(nums[i]);
-                helper(nums, result, temp, visited);
-                temp.remove(temp.size()-1);
-                visited[i] = false;
+            // 跟前面一樣 而且 前面還沒被放入的 => 排除
+            if (i > 0 && nums[i] == nums[i - 1] && visited[i - 1] == false){
+                continue;
             }
+            
+            subset.add(nums[i]);
+            visited[i] = true;
+            permutationHelper(nums, result, subset, visited);
+            subset.remove(subset.size() - 1);
+            visited[i] = false;
+        }
     }
-    
-   
-}
-
-
+};
