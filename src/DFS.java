@@ -1,5 +1,5 @@
 /////////////////////////////
-// inorder travesal
+// DFS on Tree - inorder travesal
 /////////////////////////////
 
 public void inoder(TreeNode root, List<Integer> result){
@@ -11,3 +11,13 @@ public void inoder(TreeNode root, List<Integer> result){
   result.add(root);
   inorder(root.right, result);
 }
+
+
+/////////////////////////////
+// DFS - combination (need start index)
+/////////////////////////////
+
+
+/////////////////////////////
+// DFS - permutation (no need start index)
+/////////////////////////////
