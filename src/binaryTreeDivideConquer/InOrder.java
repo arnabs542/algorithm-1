@@ -2,9 +2,7 @@ package binaryTreeDivideConquer;
 
 import java.util.ArrayList;
 
-/**
- * Created by epingho on 2017/6/26.
- */
+// 左根右
 public class InOrder {
     public ArrayList<Integer> inorderTraversal(TreeNode root) {
         ArrayList<Integer> result = new ArrayList<Integer>();
