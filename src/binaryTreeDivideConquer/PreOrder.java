@@ -46,6 +46,44 @@ public class PreOrder {
        preorderTraversal(root.right, result);
 
     }
+}
 
+////////////////////////
+////   iteration    
+////////////////////////
 
+public class Solution {
+    public class NodeVisit{
+        public TreeNode node;
+        public boolean isChecked;
+        public NodeVisit(TreeNode node, boolean isChecked){
+            this.node = node;
+            this.isChecked = isChecked;
+        }
+    }
+    
+    public List<Integer> preorderTraversal(TreeNode root) {
+        List<Integer> result = new ArrayList<Integer>();
+        
+        Stack<NodeVisit> visitStack = new Stack<NodeVisit>();
+        visitStack.push(new NodeVisit(root, false));
+        
+        while(!visitStack.isEmpty()){
+            NodeVisit thisNodeVisit = visitStack.pop();
+            if (thisNodeVisit.node == null){
+                continue;
+            }
+            
+            if (thisNodeVisit.isChecked){
+                result.add(thisNodeVisit.node.val);
+            }else{
+                thisNodeVisit.isChecked = true;
+                visitStack.push(new NodeVisit(thisNodeVisit.node.right, false));
+                visitStack.push(new NodeVisit(thisNodeVisit.node.left, false));
+                visitStack.push(thisNodeVisit);
+            }
+        }
+        
+        return result;
+    }
 }
