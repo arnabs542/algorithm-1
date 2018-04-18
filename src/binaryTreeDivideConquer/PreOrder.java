@@ -1,6 +1,12 @@
 package binaryTreeDivideConquer;
 import java.util.ArrayList;
 
+// preorder
+// 根左右
+
+////////////////////////
+////  recirsion 
+////////////////////////
 public class PreOrder {
 
     public static void main(String[] args) {
