@@ -1,3 +1,5 @@
+// 從start小的開始看
+
 // insert intervals
 
 // merge intervals
