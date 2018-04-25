@@ -40,6 +40,8 @@ while (left <= right){
     int temp = A[right];
     A[right] = A[left];
     A[left] = temp;
+    left ++;
+    right --;
   }
 }
 
