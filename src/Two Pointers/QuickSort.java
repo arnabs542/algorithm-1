@@ -23,6 +23,8 @@ if (A[end] == target){
 //////////////////////////////////////
 // Quick Sort
 // 目標left, right 交錯
+//////////////////////////////////////
+
 int pivot = A[(start + end)/2];
 int left = start; right = end;
 while (left <= right){
