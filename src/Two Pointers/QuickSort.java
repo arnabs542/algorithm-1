@@ -21,7 +21,7 @@ if (A[end] == target){
 }
 
 //////////////////////////////////////
-// Quick Sort O(NlogN);
+// Quick Sort O(NlogN), 最壞O(N^2)
 // 目標left, right 交錯 
 // (left <= right)
 // 等於pivot 需交換, 以避免 1,1,1,1,1,1 
