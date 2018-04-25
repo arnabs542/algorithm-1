@@ -52,3 +52,23 @@ while (left <= right){
 
 QuickSort(A, start, right);
 QuickSort(A, left, end);
+
+//////////////////////////////////////
+// Quick Select 
+// 找第K大的數, The Kth element
+// 一樣進行quick sort, 不過不用排全部, 只要排k個
+// quick sort結果:
+// start....right.left....end
+// 判斷第K大的數在左邊還是右邊
+// 在左邊判斷
+// if (start + k - 1 < right){
+//  quickSelect(nums, start, right, k);
+// }
+// 在右邊, 只要找k - (left - start)個數
+// if (start + k - 1 > left){
+//  quickSelect(nums, left, end, k - (left - start));
+// }
+// 不在左邊也不在右邊, 那只可能在right.left中間
+// return nums[right+1];
+//////////////////////////////////////
+
