@@ -1,4 +1,4 @@
-// 2分法
+// 2分法 O(logN)
 // 停在start, end 不交錯
 // 最後判斷應該取start 還是 end
 while(start + 1 < end){
@@ -21,7 +21,7 @@ if (A[end] == target){
 }
 
 //////////////////////////////////////
-// Quick Sort
+// Quick Sort O(NlogN);
 // 目標left, right 交錯 
 // (left <= right)
 // 等於pivot 需交換, 以避免 1,1,1,1,1,1 
