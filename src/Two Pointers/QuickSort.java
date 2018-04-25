@@ -22,17 +22,22 @@ if (A[end] == target){
 
 //////////////////////////////////////
 // Quick Sort
-// 目標left, right 交錯
+// 目標left, right 交錯 
+// (left <= right)
+// 等於pivot 需交換, 以避免 1,1,1,1,1,1 
+// (A[left] < pivot, A[right] > pivot)
 //////////////////////////////////////
-
+if (start >= end){
+  return;
+}
 int pivot = A[(start + end)/2];
 int left = start; right = end;
 while (left <= right){
-  while (left <= right && A[left] <= pivot){
+  while (left <= right && A[left] < pivot){
     left ++;
   }
   
-  while (left <= right && A[right] >= pivot){
+  while (left <= right && A[right] > pivot){
     right --;
   }
   
