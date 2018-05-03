@@ -1,3 +1,5 @@
+//左右根
+
 package binaryTreeDivideConquer;
 
 import java.util.ArrayList;
