@@ -17,66 +17,58 @@ public class Solution {
      * @return: the value in the BST that is closest to the target
      */
     public int closestValue(TreeNode root, double target) {
-        if (root == null){
-            return 0;
-        }
+        TreeNode lower = findLowerBound(root, target);
+        TreeNode upper = findUpperBound(root, target);
         
-        TreeNode lowerBound = findLowerBound(root, target);
-        TreeNode upperBound = findUpperBound(root, target);
-        if (lowerBound == null){
-            return upperBound.val;
-        }
-        
-        if (upperBound == null){
-            return lowerBound.val;
-        }
-        
-        if (Math.abs(target - lowerBound.val) > Math.abs(target - upperBound.val)){
-            return upperBound.val;
+        if (lower == null) return upper.val;
+        if (upper == null) return lower.val;
+        if (Math.abs(lower.val - target) > Math.abs(upper.val - target)){
+            return upper.val;
         }else{
-            return lowerBound.val;
+            return lower.val;
         }
+
     }
     
-    private TreeNode findLowerBound(TreeNode root, double target){
+    public TreeNode findLowerBound(TreeNode root, double target){
         if (root == null){
-            return root;
+            return null;
         }
         
-        if (root.val >= target){
-            // 往left去找
+        if (root.val <= target){
+            // val 比 target 小, 往右找
+            // 最後還是比target小, 就是lower bound 
+            TreeNode lowewrBound = findLowerBound(root.right, target);
+            if (lowewrBound == null){
+                return root;
+            }else{
+                return lowewrBound;
+            }
+        } else {
+            // val 比 target 大, 往左找
+            // 最後還是比target大的話, return null, 沒有lower bound
             return findLowerBound(root.left, target);
         }
-        else { 
-            // root.val < target
-            // 往right去找
-            TreeNode lowerBound = findLowerBound(root.right, target);
-            if (lowerBound != null){
-                return lowerBound;
-            }
-        }
-        
-        return root;
     }
     
-    private TreeNode findUpperBound(TreeNode root, double target){
+    public TreeNode findUpperBound(TreeNode root, double target){
         if (root == null){
-            return root;
+            return null;
         }
         
-        if (root.val < target){
-            // 往right去找
+        if (root.val <= target){
+            // val 比 target 小, 往右找
+            // 最後還是比target小, 就是沒有upper bound, return null
             return findUpperBound(root.right, target);
-        }
-        else { 
-            // root.val < target
-            // 往left去找
+        } else {
+            // val 比 target 大, 往左找
+            // 最後還是比target大的話, 就是upper bound
             TreeNode upperBound = findUpperBound(root.left, target);
-            if (upperBound != null){
+            if (upperBound == null){
+                return root;
+            }else{
                 return upperBound;
             }
         }
-        
-        return root;
     }
 }
