@@ -1,7 +1,10 @@
 // divide and counquer
 // 
 // 93. Balanced Binary Tree 
-// => 求出 lowerBound 和 upperBound。即 < target 的最大值和 >= target 的最小值, 再做比較
+// => 求深度
+
+// 95. Validate Binary Search Tree
+// => recursion 傳入 lowerbound and upperbound
 
 // 596. Minimum Subtree
 // 97. Maximum Depth of Binary Tree
@@ -9,6 +12,9 @@
 
 // 453. Flatten Binary Tree to Linked List
 // => 紀錄最後一個點, 才能把right的部分接進來
+
+// 900. Closest Binary Search Tree Value
+// => 求出 lowerBound 和 upperBound。即 < target 的最大值和 >= target 的最小值, 再做比較
 
 // 902. Kth Smallest Element in a BST
 // => inorder traverse 先找到最小的 O(h) 樹高
@@ -18,8 +24,8 @@
 // 578. Lowest Common Ancestor III
 // => 左右都存在為LCA
 // => 回傳result 以判斷
-
-
+// => 因為要找Lowest common ancestor (A, B的第一個共同祖先) 
+// => only (LCA == null) 才算是答案
 
 
 // DFS
