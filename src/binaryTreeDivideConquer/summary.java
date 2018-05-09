@@ -30,6 +30,13 @@
 915. Inorder Predecessor in BST
 https://www.jiuzhang.com/solution/inorder-predecessor-in-bst/
 
+701. Trim a Binary Search Tree
+=> 判斷root是否在區間內,
+=> 在區間內, root.left, root.right各自下去
+=> 不再區間內, 判斷要trim left or right
+=> trim left => root = 遞歸root.right
+=> trim right => root = 遞歸root.left
+
 // DFS
 // 480. Binary Tree Paths
 // BinaryTreePathSum
