@@ -1,15 +1,15 @@
 // divide and counquer
-// 
+
+ 596. Minimum Subtree
+ 97. Maximum Depth of Binary Tree
+ 155. Minimum Depth of Binary Tree
+ 
  93. Balanced Binary Tree 
  => 求深度
 
  95. Validate Binary Search Tree
  => recursion 傳入 lowerbound and upperbound
-
- 596. Minimum Subtree
- 97. Maximum Depth of Binary Tree
- 155. Minimum Depth of Binary Tree
-
+ 
  453. Flatten Binary Tree to Linked List
  => 紀錄最後一個點, 才能把right的部分接進來
 
