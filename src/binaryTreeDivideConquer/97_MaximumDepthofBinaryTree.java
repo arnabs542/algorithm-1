@@ -1,32 +1,39 @@
-package binaryTreeDivideConquer;
-
 /**
- * Created by epingho on 2017/6/26.
+ * Definition of TreeNode:
+ * public class TreeNode {
+ *     public int val;
+ *     public TreeNode left, right;
+ *     public TreeNode(int val) {
+ *         this.val = val;
+ *         this.left = this.right = null;
+ *     }
+ * }
  */
-public class 97_MaximumDepthofBinaryTree {
-    public int maxDepth(TreeNode root) {
-        int leftDepth = 0;
-        int rightDepth = 0;
-        if (root == null){
-            return 0;
-        }
 
-        leftDepth = maxDepth(root.left);
-        rightDepth = maxDepth(root.right);
-
-        if (leftDepth > rightDepth){
-            return leftDepth + 1;
-        }else {
-            return rightDepth + 1;
-        }
-    }
-    
-    // version 2
+public class Solution {
+    /**
+     * @param root: The root of binary tree.
+     * @return: An integer
+     */
     public int maxDepth(TreeNode root) {
         if (root == null){
             return 0;
         }
         
-        return Math.max(maxDepth(root.left), maxDepth(root.right)) + 1;
+        return getDepth(root);
+    }
+    
+    private int getDepth(TreeNode root){
+        if (root == null){
+            return Integer.MIN_VALUE;
+        }
+        
+        if (root.left == null && root.right == null){
+            return 1;
+        }
+        
+        int leftDepth = getDepth(root.left);
+        int rightDepth = getDepth(root.right);
+        return Math.max(leftDepth, rightDepth) + 1;
     }
 }
