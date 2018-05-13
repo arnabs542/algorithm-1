@@ -18,6 +18,10 @@ public void inoder(TreeNode root, List<Integer> result){
 /////////////////////////////
 
 
+
+
 /////////////////////////////
 // DFS - permutation (no need start index)
 /////////////////////////////
+// for loop nums array
+// 用一個boolean[nums.length]紀錄哪個點已經走過
