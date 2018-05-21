@@ -14,6 +14,7 @@ public class Solution {
         HashMap<Integer, Integer> map = new HashMap<Integer, Integer>();
         
         int sum = 0;
+        //***** 需要加入預設值 for test case [1, -1]
         map.put(sum, -1);
         
         for (int i = 0; i < nums.length; i ++){
