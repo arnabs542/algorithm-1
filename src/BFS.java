@@ -20,7 +20,9 @@ while(!q.isEmpty()){
 
 /////////////////////////////
 // BFS on graph 
+// 需要紀錄visited node
 // use HashSet/HashMap/arraylist to save visited node
+// or if the node = 1, made the visited node = 0; so we will not consider it again
 /////////////////////////////
 
 Queue<T> q = new LinkedList<T>();
