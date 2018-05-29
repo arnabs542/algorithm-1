@@ -24,3 +24,18 @@ Queue<T> q = new PriorityQueue<T>();
     q.poll()
     q.offer(poll出那一列的下個element)
     }
+
+////////////////////////////////////////////////////////
+////////  sweep line   ///////
+////////////////////////////////////////////////////////
+391. Number of Airplanes in the Sky
+821. Time Intersection
+=> create new class for the event, 轉換input data to List<Event> eventList
+=> Event(int time, int type) 
+=> type: in: 1; out -1;
+=> eventList.sort(Comparator.comparing((event e) -> e.time))
+=> loop through eventList
+
+821. Time Intersection
+=> 如果使用者上線 && count == 2, 记录下这个时间, 作为两个用户都在线的起点
+=> 如果使用者下線 && count == 1, 记录下这个时间, 作为两个用户都在线的終點, 放入結果
