@@ -91,7 +91,7 @@ for (int i = 0; i < k; i ++){
         }
  ```
  ## 倍增法 Exponential Backoff
- 447. Search in a Big Sorted Array
+ 447. Search in a Big Sorted Array O(log k)
  ``` java 
         int index = 1;
         while(reader.get(index -1) < target){
