@@ -32,4 +32,32 @@ public int findPosition(int[] nums, int target) {
         return -1;
     }
 ```
+## First position
+從右邊逼過去找first position: nums[mid] == target 時讓 end = mid; 最後先討論 nums[start]
+```java
+        if (nums[mid] == target){
+                end = mid;
+            } else if (nums[mid] > target){
+                end = mid;
+            } else {
+                start = mid;
+            }
+           
+       
+```
+
+## Last position
+從左邊逼過去找last position: nums[mid] == target 讓 start = mid; 最後先討論 nums[end]
+```java
+        if (nums[mid] == target){
+                end = mid;
+            } else if (nums[mid] > target){
+                end = mid;
+            } else {
+                start = mid;
+            }
+           
+       
+```
+
 
