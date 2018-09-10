@@ -34,7 +34,6 @@ public int findPosition(int[] nums, int target) {
 ```
 ## First position
 14. First Position of Target
-
 從右邊逼過去找first position: nums[mid] == target 時讓 end = mid; 最後先討論 nums[start]
 ```java
         if (nums[mid] == target){
@@ -50,7 +49,6 @@ public int findPosition(int[] nums, int target) {
 
 ## Last position
 458. Last Position of Target
-
 從左邊逼過去找last position: nums[mid] == target 讓 start = mid; 最後先討論 nums[end]
 ```java
         if (nums[mid] == target){
