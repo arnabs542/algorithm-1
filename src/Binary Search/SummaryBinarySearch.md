@@ -34,6 +34,7 @@ public int findPosition(int[] nums, int target) {
 ```
 ## First position
 14. First Position of Target
+
 從右邊逼過去找first position: nums[mid] == target 時讓 end = mid; 最後先討論 nums[start]
 ```java
         if (nums[mid] == target){
@@ -49,6 +50,7 @@ public int findPosition(int[] nums, int target) {
 
 ## Last position
 458. Last Position of Target
+
 從左邊逼過去找last position: nums[mid] == target 讓 start = mid; 最後先討論 nums[end]
 ```java
         if (nums[mid] == target){
@@ -61,5 +63,44 @@ public int findPosition(int[] nums, int target) {
            
        
 ```
+## Find K Closest Elements
+460. Find K Closest Elements
+
+找到start and end, 之後loop k次, 看看start, end哪個靠近放哪個
+```java
+for (int i = 0; i < k; i ++){
+            if (start < 0){
+                // go to right
+                result[i] = A[end];
+                end ++;
+                continue;
+            }
+            if (end > A.length - 1){
+                // go to left
+                result[i] = A[start];
+                start --;
+                continue;
+            } 
+            if ((Math.abs(A[start] - target) <= Math.abs(A[end] - target))){
+               result[i] = A[start];
+               start --;
+            } else {
+                result[i] = A[end];
+                end ++;
+            }
+        }
+ ```
+ ##倍增法 Exponential Backoff
+ 447. Search in a Big Sorted Array
+ ``` java 
+ int index = 1;
+        while(reader.get(index -1) < target){
+            index = index * 2;
+        }
+        int start = 0;
+        int end = index -1;
+        ```
+ 
+
 
 
