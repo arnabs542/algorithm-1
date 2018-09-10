@@ -90,16 +90,16 @@ for (int i = 0; i < k; i ++){
             }
         }
  ```
- ##倍增法 Exponential Backoff
+ ## 倍增法 Exponential Backoff
  447. Search in a Big Sorted Array
  ``` java 
- int index = 1;
+        int index = 1;
         while(reader.get(index -1) < target){
             index = index * 2;
         }
         int start = 0;
         int end = index -1;
-        ```
+ ```
  
 
 
