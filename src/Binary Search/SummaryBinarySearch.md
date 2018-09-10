@@ -1,4 +1,4 @@
-# Binary Search
+# Binary Search O(logn)
 find target value in sorted array/list
 
 ## Basic template
@@ -33,6 +33,7 @@ public int findPosition(int[] nums, int target) {
     }
 ```
 ## First position
+14. First Position of Target
 從右邊逼過去找first position: nums[mid] == target 時讓 end = mid; 最後先討論 nums[start]
 ```java
         if (nums[mid] == target){
