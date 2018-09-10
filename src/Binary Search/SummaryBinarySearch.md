@@ -51,7 +51,7 @@ public int findPosition(int[] nums, int target) {
 從左邊逼過去找last position: nums[mid] == target 讓 start = mid; 最後先討論 nums[end]
 ```java
         if (nums[mid] == target){
-                end = mid;
+                start = mid;
             } else if (nums[mid] > target){
                 end = mid;
             } else {
