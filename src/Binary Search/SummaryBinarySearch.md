@@ -1,6 +1,14 @@
 # Binary Search O(logn)
 find target value in sorted array/list
 
+## Review
+62. Search in Rotated Sorted Array
+
+390. Find Peak Element II (2維 - 行列交替二分) O(n+m)
+
+* Fast power
+
+
 ## Basic template
 457. Classical Binary Search
 ```java
