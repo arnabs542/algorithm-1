@@ -134,6 +134,8 @@ n could be >=0 or < 0;
 
 141. Sqrt(x)
 
+二分答案! 先隨便選一個, 看看大小. mid 取 long * long mid = start + (end - start)/2;
+
 586. Sqrt(x) II
 
 ## Copy Books
