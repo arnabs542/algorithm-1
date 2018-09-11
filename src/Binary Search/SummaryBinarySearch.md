@@ -126,9 +126,11 @@ for (int i = 0; i < k; i ++){
 140. Fast Power
 
 (ac)%b = (a%b)(c%b)%b
-對指數項2分
+指數項/2, 討論餘數 = 1, or 餘數 = 0
 
 428. Pow(x, n)
+
+n could be >=0 or < 0;
 
 141. Sqrt(x)
 
