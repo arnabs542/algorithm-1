@@ -102,7 +102,11 @@ for (int i = 0; i < k; i ++){
         int start = 0;
         int end = index -1;
  ```
+ ## Rotated Sorted Array
+ 跟最後一個數比, 比最後一個數大的是在rotated sorted array的前段, 比最後一個數小的是在rotated sorted array的後段, 最後判斷start/end哪個大
  
-
+ 159. Find Minimum in Rotated Sorted Array
+ 
+  <span style="color:red">62. Search in Rotated Sorted Array</span>
 
 
