@@ -1,56 +1,28 @@
 public class Solution {
-    /*
+    /**
      * @param x: the base number
      * @param n: the power number
      * @return: the result
      */
     public double myPow(double x, int n) {
-        //x^n
-        if (n == 0) {return 1;}
-        if(n % 2 == 0){
-            double temp = myPow(x, n/2);
-            return temp * temp;
+        if (n >= 0){
+            return helper(x, n);
         }else{
-            double temp = myPow(x, n/2);
-            return temp * x;
+            return 1 / helper(x, n);
         }
     }
-}
-
-
-public class Solution {
-    /*
-     * @param x: the base number
-     * @param n: the power number
-     * @return: the result
-     */
-    public double myPow(double x, int n) {
-        // x^n
-        if (n == 0){ 
-            return 1; 
-        } 
-        
-        int org_n = n;
-        double answer = 1;
-        double base = x;
-        while( n != 0){
-            if ( n % 2 == 1 || n % 2 == -1){
-                answer = answer * base;
-            } 
-            base = base * base;
-            n = n/2;
+    
+    private double helper(double x, int n){
+        if(n == 0){
+            return 1;
         }
         
-        if (org_n > 0){
-            return answer;
+        double y = helper(x, n/2);
+        y = y * y;
+        if (n % 2 == 1 || n % 2 == -1){
+            y = y * x;
         }
         
-        if (org_n < 0){
-            return (1/answer);
-        }
-        
-        return 0;
+        return y;
     }
 }
-
-
