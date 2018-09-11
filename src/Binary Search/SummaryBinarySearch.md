@@ -98,18 +98,7 @@ for (int i = 0; i < k; i ++){
             }
         }
  ```
-## 倍增法 Exponential Backoff
-447. Search in a Big Sorted Array O(log k)
- 
-用乘以2來預估start and end 開始的值
- ``` java 
-        int index = 1;
-        while(reader.get(index -1) < target){
-            index = index * 2;
-        }
-        int start = 0;
-        int end = index -1;
- ```
+
 ## Rotated Sorted Array
 跟最後一個數比, 比最後一個數大的是在rotated sorted array的前段, 比最後一個數小的是在rotated sorted array的後段, 最後判斷start/end哪個大
  
@@ -122,6 +111,18 @@ for (int i = 0; i < k; i ++){
 
 390. Find Peak Element II (2維 - 行列交替二分) O(n+m)
 
+## 倍增法 Exponential Backoff
+447. Search in a Big Sorted Array O(log k)
+ 
+用乘以2來預估start and end 開始的值
+ ``` java 
+        int index = 1;
+        while(reader.get(index -1) < target){
+            index = index * 2;
+        }
+        int start = 0;
+        int end = index -1;
+ ```
 ## Fast power
 140. Fast Power
 
