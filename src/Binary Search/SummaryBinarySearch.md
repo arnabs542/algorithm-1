@@ -116,12 +116,12 @@ for (int i = 0; i < k; i ++){
  
 用乘以2來預估start and end 開始的值
  ``` java 
-        int index = 1;
-        while(reader.get(index -1) < target){
-            index = index * 2;
-        }
-        int start = 0;
-        int end = index -1;
+     int index = 1;
+     while(reader.get(index -1) < target){
+        index = index * 2;
+     }
+     int start = 0;
+     int end = index -1;
  ```
 ## Fast power
 140. Fast Power
