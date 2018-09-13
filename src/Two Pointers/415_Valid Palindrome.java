@@ -41,3 +41,35 @@ public class Solution {
         return Character.isLetter(c) || Character.isDigit(c);
     }
 }
+
+
+public class Solution {
+    /**
+     * @param s: A string
+     * @return: Whether the string is a valid palindrome
+     */
+    public boolean isPalindrome(String s) {
+        char[] stringArray = s.toLowerCase().toCharArray();
+        for (int i = 0, j = stringArray.length - 1; i < j; i ++, j --){
+            while(i < stringArray.length && !isValid(stringArray[i])){
+                i ++;
+            }
+            while(j >= 0 && !isValid(stringArray[j])){
+                j --;
+            }
+            
+            if (i < stringArray.length && j >= 0 ){
+                if (stringArray[i] != stringArray[j]){
+                return false;
+            }
+            }
+            
+        }
+        
+        return true;
+    }
+    
+    public boolean isValid(char c){
+        return Character.isLetter(c) || Character.isDigit(c);
+    }
+}
