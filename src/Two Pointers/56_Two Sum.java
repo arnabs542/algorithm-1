@@ -1,6 +1,6 @@
 // 兩種方法
 // 1. hashmap O(n)
-// 2. two pointers O(nlogn) 
+// 2. two pointers O(nlogn) => require 排序, if we need to map back to original index, this will not work.
 
 public class Solution {
     /*
