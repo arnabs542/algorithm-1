@@ -4,7 +4,7 @@
 ### (同向) 
 610. Two Sum - Difference equals to target
 
-## (相向) - Palindrome 
+## Palindrome (相向)
 415. Valid Palindrome <br/>
 891. Valid Palindrome II <br/>
 xyzbcczyx <br/>
@@ -12,16 +12,20 @@ xyzbcczyx <br/>
 remove b, check c to c <br/>
 remove c, check b to c <br/>
 
-## (同向) - duplicate numbers  
+## Duplicate numbers (同向)
 521. Remove Duplicate Numbers in Array <br/>
 
-## (同向) - sliding window
+## Sliding window (同向) 
 604. Window Sum <br/>
 362. Sliding Window Maximum <br/>
 => deque <br/>
 360. Sliding Window Median <br/>
 
-## (同向)
+## Linked List (同向)
+228. Middle of Linked List <br/>
+102. Linked List Cycle <br/>
+
+
 
 
 
