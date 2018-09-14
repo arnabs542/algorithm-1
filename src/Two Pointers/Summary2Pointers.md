@@ -1,8 +1,4 @@
 # Two Pointers
-## Two Sum
-### (相向)
-### (同向) 
-610. Two Sum - Difference equals to target
 
 ## Palindrome (相向)
 415. Valid Palindrome <br/>
