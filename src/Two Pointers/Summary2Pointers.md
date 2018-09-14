@@ -1,4 +1,9 @@
 # Two Pointers
+## Two Sum
+### (相向)
+### (同向) 
+610. Two Sum - Difference equals to target
+
 ## (相向) - Palindrome 
 415. Valid Palindrome <br/>
 891. Valid Palindrome II <br/>
@@ -16,6 +21,7 @@ remove c, check b to c <br/>
 => deque <br/>
 360. Sliding Window Median <br/>
 
+## (同向)
 
 
 
