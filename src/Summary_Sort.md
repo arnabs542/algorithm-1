@@ -24,6 +24,9 @@ if (A[end] == target){
 }
 ```
 
+## Quick Sort
+*O(NlogN), 最壞O(N^2)
+
 ```java
 //////////////////////////////////////
 // Quick Sort O(NlogN), 最壞O(N^2)
