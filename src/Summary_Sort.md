@@ -1,6 +1,7 @@
-## Binary Search 2分法 O(logN) 
-// 停在start, end 不交錯
-// 最後判斷應該取start 還是 end
+## Binary Search 
+* 2分法 O(logN) 
+* 停在start, end 不交錯
+* 最後判斷應該取start 還是 end
 
 ```java
 while(start + 1 < end){
