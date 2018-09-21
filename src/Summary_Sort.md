@@ -25,10 +25,10 @@ if (A[end] == target){
 ```
 
 ## Quick Sort
-*O(NlogN), 最壞O(N^2)</br>
+*O(NlogN), 最壞O(N^2) </br>
 
-143. Sort Colors II</br>
-31. Partition Array</br>
+143. Sort Colors II </br>
+31. Partition Array </br>
 
 ```java
 //////////////////////////////////////
