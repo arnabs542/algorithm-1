@@ -27,7 +27,7 @@ if (A[end] == target){
 ## Quick Sort
 *O(NlogN), 最壞O(N^2) </br>
 
-143. Sort Colors II </br>
+143. Sort Colors II => O(NlogK)</br>
 31. Partition Array </br>
 
 ```java
