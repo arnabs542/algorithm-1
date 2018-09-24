@@ -64,6 +64,10 @@ while (left <= right){
 QuickSort(A, start, right);
 QuickSort(A, left, end);
 ```
+
+## Quick Select
+5. Kth Largest Element
+
 ``` java
 //////////////////////////////////////
 // Quick Select 
