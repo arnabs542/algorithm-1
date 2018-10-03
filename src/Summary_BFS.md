@@ -1,5 +1,6 @@
 # BFS
 ## Review
+#69
 
 ## BFS on tree
 ==> 因為tree結構上下分明, 每層丟進queue
