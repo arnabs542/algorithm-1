@@ -6,6 +6,8 @@
 ``` java
 Queue<TreeNode> q = new LinkedList<TreeNode>();
 q.offer(root);
+
+// 判斷queue是不是空, *** q.isEmpty() ****
 while(!q.isEmpty()){
   int size = q.size();
   for (int i = 0; i < size; i ++){
