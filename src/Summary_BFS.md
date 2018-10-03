@@ -21,6 +21,10 @@ while(!q.isEmpty()){
   }
 }
 ```
+69. Binary Tree Level Order Traversal </br>
+=> challenge 1: use 1 queue (done)
+=> challenge 2: use DFS (todo)
+
 
 ## BFS on graph
 ==> 圖可能會有環, 一個節點的鄰居的鄰居可能是自己, 所以要記錄去過的點 </br>
