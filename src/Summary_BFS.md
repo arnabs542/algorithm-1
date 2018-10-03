@@ -22,8 +22,8 @@ while(!q.isEmpty()){
 }
 ```
 69. Binary Tree Level Order Traversal </br>
-=> challenge 1: use 1 queue (done)
-=> challenge 2: use DFS (todo)
+=> challenge 1: use 1 queue (done) </br>
+=> challenge 2: use DFS (todo) </br>
 
 
 ## BFS on graph
