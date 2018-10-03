@@ -2,7 +2,7 @@
 ## Review
 
 ## BFS on tree
-==> queue
+==> 因為tree結構上下分明, 每層丟進queue
 ``` java
 Queue<TreeNode> q = new LinkedList<TreeNode>();
 q.offer(root);
@@ -21,7 +21,7 @@ while(!q.isEmpty()){
 ```
 
 ## BFS on graph
-==> 要記錄去過的點 </br>
+==> 圖可能會有環, 要記錄去過的點 </br>
 1. use HashSet/HashMap/arraylist to save visited node </br>
 2. or if node = 1 mark visited node = 0, then we will not consider it again
 ```java
