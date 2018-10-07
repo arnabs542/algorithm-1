@@ -64,3 +64,79 @@ public class Solution {
         return nextWords;
     }
 }
+
+
+
+public class Solution {
+    /*
+     * @param start: a string
+     * @param end: a string
+     * @param dict: a set of string
+     * @return: An integer
+     */
+    public int ladderLength(String start, String end, Set<String> dict) {
+        // 1. put start in queue
+        // 2. poll from queue, find what could be the next word from the dictionary
+        // "hit" : "hot", 
+        // 3. offer the word found in queue
+        //// follow level order
+        
+        if (start.equals(end)){
+            return 1;
+        }
+        // 1. add end word in dictionary
+        dict.add(end);
+        
+        // 2. offer start in Queue
+        Queue<String> q = new LinkedList<String>();
+        HashSet<String> hs = new HashSet<String>();
+        int count = 1;
+        q.offer(start);
+        hs.add(start);
+        
+        while(!q.isEmpty()){
+            int size = q.size();
+            for (int i = 0; i < size; i ++){
+                String word = q.poll();
+                List<String> neighbors = findNeighborsInDict(word, dict);
+                for (int j = 0; j < neighbors.size(); j ++){
+                    String thisNeighbor = neighbors.get(j);
+                    if (hs.contains(thisNeighbor)){
+                        continue;
+                    } else{
+                        if (thisNeighbor.equals(end)){
+                            return count;
+                        }
+                        hs.add(thisNeighbor);
+                        q.offer(thisNeighbor);
+                    }
+                }
+            }
+            count ++;
+        }
+        
+        return 0;
+    }
+    
+    private List<String> findNeighborsInDict(String word, Set<String> dict){
+        List<String> neighbors = new ArrayList<String>();
+        for (char c = 'a'; c <= 'z'; c ++){
+            for (int i = 0; i < word.length(); i ++){
+                if (word.charAt(i) == c){
+                    continue;
+                }
+                String newWord = replace(word, i, c);
+                if (dict.contains(newWord)){
+                    neighbors.add(newWord);
+                }
+            }
+        }
+        return neighbors;
+    }
+    
+    private String replace(String word, int index, char c){
+        char[] wordChar = word.toCharArray();
+        wordChar[index] = c;
+        return new String(wordChar);
+    }
+}
