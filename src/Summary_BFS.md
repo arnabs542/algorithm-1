@@ -25,7 +25,10 @@ while(!q.isEmpty()){
 69. Binary Tree Level Order Traversal </br>
 => challenge 1: use 1 queue (done) </br>
 => challenge 2: use DFS (todo) </br>
-
+7. Serialize and Deserialize Binary Tree </br>
+70. Binary Tree Level Order Traversal II </br>
+71. Binary Tree Zigzag Level Order Traversal </br>
+242. Convert Binary Tree to Linked Lists by Depth
 
 ## BFS on graph
 ==> 圖可能會有環, 一個節點的鄰居的鄰居可能是自己, 所以要記錄去過的點 </br>
