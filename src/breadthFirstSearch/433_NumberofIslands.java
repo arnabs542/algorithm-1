@@ -64,3 +64,62 @@ public class NumberofIslands {
         }
     }
 }
+
+
+
+class Coordinate{
+    int x;
+    int y;
+    boolean island;
+    
+    public Coordinate(int x, int y){
+        this.x = x;
+        this.y = y;
+    }
+}
+
+public class Solution {
+    /**
+     * @param grid: a boolean 2D matrix
+     * @return: an integer
+     */
+    public int numIslands(boolean[][] grid) {
+        int numIslands = 0;
+        
+        for (int i = 0; i < grid.length; i ++){
+            for (int j = 0; j < grid[i].length; j ++){
+                if (grid[i][j]){
+                    BFS(grid, new Coordinate(i, j));
+                    numIslands ++;
+                }
+            }
+        }
+        
+        return numIslands;
+    }
+    
+    private void BFS(boolean[][] grid, Coordinate thisIsland){
+        Queue<Coordinate> q = new LinkedList<Coordinate>();
+        q.offer(thisIsland);
+        while(!q.isEmpty()){
+            Coordinate c = q.poll();
+            if (c.x + 1 < grid.length && grid[c.x + 1][c.y]){
+                grid[c.x + 1][c.y] = false;
+                q.offer(new Coordinate(c.x + 1, c.y));
+            }
+            if (c.x - 1 >= 0 && grid[c.x - 1][c.y]){
+                grid[c.x - 1][c.y] = false;
+                q.offer(new Coordinate(c.x - 1, c.y));
+            }
+            if (c.y + 1 < grid[0].length && grid[c.x][c.y + 1]){
+                grid[c.x][c.y + 1] = false;
+                q.offer(new Coordinate(c.x, c.y + 1));
+            }
+            if (c.y - 1 >= 0 && grid[c.x][c.y - 1]){
+                grid[c.x][c.y - 1] = false;
+                q.offer(new Coordinate(c.x, c.y - 1));
+            }
+        }
+    }
+    
+}
