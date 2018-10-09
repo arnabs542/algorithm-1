@@ -1,6 +1,6 @@
 # BFS
 ## Review
-#69
+#69 #120
 
 ## BFS on tree
 ==> 因為tree結構上下分明, 每層丟進queue
@@ -55,6 +55,10 @@ while(!q.isEmpty()){
 }
 
 ```
+120. Word Ladder </br>
+433. Number of Islands </br>
+611. Knight Shortest Path </br>
+
 
 ## Topological sorting
 ``` java
