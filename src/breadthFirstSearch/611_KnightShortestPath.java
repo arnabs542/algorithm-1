@@ -1,59 +1,70 @@
-package breadthFirstSearch;
-
-import java.util.HashSet;
-import java.util.LinkedList;
-
 /**
- * Created by epingho on 2017/7/5.
+ * Definition for a point.
+ * class Point {
+ *     int x;
+ *     int y;
+ *     Point() { x = 0; y = 0; }
+ *     Point(int a, int b) { x = a; y = b; }
+ * }
  */
-public class KnightShortestPath {
+
+public class Solution {
+    /**
+     * @param grid: a chessboard included 0 (false) and 1 (true)
+     * @param source: a point
+     * @param destination: a point
+     * @return: the shortest path 
+     */
     public int shortestPath(boolean[][] grid, Point source, Point destination) {
-        if (source == null
-                || destination == null
-                || grid == null
-                || grid.length == 0){
-            return -1;
-        }
+        if (source == null ||
+            grid == null ||
+            destination == null ||
+            grid.length == 0){
+                return -1;
+            }
+        
+        int[] xMove = {1, 1, -1, -1, 2, 2, -2, -2};
+        int[] yMove = {2, -2, 2, -2, 1, -1, 1, -2};
+        
+        int step = 0;
+        Queue<Point> q = new LinkedList<Point>();
 
-        int[] moveX = {1, 1, -1, -1, 2, 2, -2, -2};
-        int[] moveY = {2, -2, 2, -2, 1, -1, 1, -1};
+        q.offer(source);
+        grid[source.x][source.y] = true;
 
-        Queue<Point> thisQ = new LinkedList<>();
-        HashSet<Point> hash = new HashSet<>();
-
-        thisQ.offer(source);
-        int steps = 0;
-
-        while (!thisQ.isEmpty()){
-            int qSize = thisQ.size();
-            for (int j = 0; j < qSize; j ++){
-                Point thisPoint = thisQ.poll();
-                if (thisPoint.x == destination.x
-                        && thisPoint.y == destination.y){
-                    return steps;
-                }
-                for (int i = 0; i < 8; i++){
-                    Point newPoint = new Point(thisPoint.x + moveX[i]
-                            , thisPoint.y + moveY[i]);
-                    // check boundry
-                    if (newPoint.x < 0
-                            || newPoint.x >= grid.length
-                            || newPoint.y < 0
-                            || newPoint.y >= grid[0].length){
-                        continue;
+        while(!q.isEmpty()){
+            int size = q.size();
+            step ++;
+            for (int j = 0; j < size; j++){
+                Point p = q.poll();
+                for (int i = 0; i < 8; i ++){
+                    Point newP = new Point(p.x + xMove[i], p.y + yMove[i]);
+                    if (isInBound(grid, newP)){
+                        if (isDestination(newP, destination)){
+                            return step;
+                        } else{
+                            if (!isBarrier(grid, newP)){
+                                q.offer(newP);
+                                grid[newP.x][newP.y] = true;
+                            }
+                        }
                     }
-
-                    if (grid[newPoint.x][newPoint.y]){
-                        continue;
-                    }
-
-                    grid[newPoint.x][newPoint.y] = true;
-                    thisQ.offer(newPoint);
                 }
             }
-            steps ++;
         }
+        
         return -1;
     }
-
+    
+    private boolean isInBound(boolean[][] grid, Point p){
+        return (p.x < grid.length && p.x >= 0 && p.y < grid[0].length && p.y >= 0);
+    }
+    
+    private boolean isBarrier(boolean[][] grid, Point p){
+        return (grid[p.x][p.y]);
+    }
+    
+    private boolean isDestination(Point p, Point d){
+        return (p.x == d.x && p.y == d.y);
+    }
 }
