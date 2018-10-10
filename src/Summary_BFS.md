@@ -1,6 +1,6 @@
 # BFS
 ## Review
-#69 #120
+#69 #120 #598. Zombie in Matrix 573. Build Post Office II
 
 ## BFS on tree
 ==> 因為tree結構上下分明, 每層丟進queue
@@ -104,5 +104,16 @@ while(!q.isEmpty()){
 return result;
 ```
 127. Topological Sorting </br>
+Todo:</br>
+615. Course Schedule </br>
+616. Course Schedule II </br>
+***** 892. Alien Dictionary </br>
+605. Sequence Reconstruction
+
+
+
+
+
+
 
 
