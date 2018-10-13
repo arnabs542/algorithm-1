@@ -105,6 +105,12 @@ while(!q.isEmpty()){
 
 return result;
 ```
+Topoligical Order的四種問法
+* 求任意1个拓扑序（Topological Order）
+* 问是否存在拓扑序（是否可以被拓扑排序）=> 輸入的數目和排序出結果數目相同
+* 求所有的拓扑序 DFS
+* 求是否存在且仅存在一个拓扑序 => Queue中最多同时只有1个节点
+
 127. Topological Sorting </br>
 892. Alien Dictionary </br>
 615. Course Schedule </br>
