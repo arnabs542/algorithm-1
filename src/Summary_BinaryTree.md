@@ -1,8 +1,21 @@
 # Binary Tree
 
- 596. Minimum Subtree
- 97. Maximum Depth of Binary Tree
- 155. Minimum Depth of Binary Tree
+## Level Order(BFS)
+## Pre Order 
+根左右</br>
+66. Binary Tree Preorder Traversal
+
+## In Order
+左根右</br>
+67. Binary Tree Inorder Traversal
+
+## Post Order
+左右根</br>
+68. Binary Tree PostOrder Traversal
+
+596. Minimum Subtree
+97. Maximum Depth of Binary Tree
+155. Minimum Depth of Binary Tree
  
  93. Balanced Binary Tree 
  => 求深度
