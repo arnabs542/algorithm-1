@@ -1,4 +1,4 @@
-// divide and counquer
+# Binary Tree
 
  596. Minimum Subtree
  97. Maximum Depth of Binary Tree
