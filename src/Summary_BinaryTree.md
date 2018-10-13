@@ -13,12 +13,14 @@
 左右根</br>
 68. Binary Tree PostOrder Traversal
 
-596. Minimum Subtree
+## Depth
 97. Maximum Depth of Binary Tree
 155. Minimum Depth of Binary Tree
- 
- 93. Balanced Binary Tree 
+93. Balanced Binary Tree 
  => 求深度
+
+
+596. Minimum Subtree
 
  95. Validate Binary Search Tree
  => recursion 傳入 lowerbound and upperbound
