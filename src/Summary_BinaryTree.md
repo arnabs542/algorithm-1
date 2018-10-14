@@ -14,9 +14,9 @@
 68. Binary Tree PostOrder Traversal
 
 ## Depth
-* 97. Maximum Depth of Binary Tree 
-* 155. Minimum Depth of Binary Tree 
-* 93. Balanced Binary Tree 
+* 97 Maximum Depth of Binary Tree 
+* 155 Minimum Depth of Binary Tree 
+* 93 Balanced Binary Tree 
  => 求深度
 
 
