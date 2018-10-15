@@ -20,14 +20,11 @@
 * 155 Minimum Depth of Binary Tree 
 * 93 Balanced Binary Tree 
  => 求深度
-
-
-596. Minimum Subtree
-
- 95. Validate Binary Search Tree
+* 596 Minimum Subtree
+* 95 Validate Binary Search Tree
  => recursion 傳入 lowerbound and upperbound
  
- 453. Flatten Binary Tree to Linked List
+*453 Flatten Binary Tree to Linked List
  => 紀錄最後一個點, 才能把right的部分接進來
 
  900. Closest Binary Search Tree Value
