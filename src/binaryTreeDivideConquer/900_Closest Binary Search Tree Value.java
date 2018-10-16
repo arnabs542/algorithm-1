@@ -72,3 +72,39 @@ public class Solution {
         }
     }
 }
+
+
+//以下為 in-order traversal 的化，时间复杂度会是 o(n)o(n) 并不是最优的。
+//另外复杂度也不是 O(logn)O(logn) 因为BST 并不保证树高是 logn 的。
+public class Solution {
+    /**
+     * @param root: the given BST
+     * @param target: the given target
+     * @return: the value in the BST that is closest to the target
+     */
+     
+    private double minDifferece = Double.MAX_VALUE;
+    private TreeNode node;
+    public int closestValue(TreeNode root, double target) {
+        helper(root, target);
+        return this.node.val;
+    }
+    
+    private void helper(TreeNode root, double target){
+        if (root == null){
+            return;
+        }
+        
+        double differece = Math.abs(target - root.val);
+        if (differece < minDifferece){
+            this.minDifferece = differece;
+            this.node = root;
+        }
+        
+        if (target - root.val > 0){
+            helper(root.right, target);
+        } else {
+            helper(root.left, target);
+        }
+    }
+}
