@@ -25,9 +25,9 @@
  => 紀錄最後一個點, 才能把right的部分接進來
  
 ## Binary Search Tree
-=> left subtree contains only nodes smaller than root's key </br>
-=> right subtree contains only nodes greater than root's key </br>
-=> left subtree and right subtree are also binary search tree
+left subtree contains only nodes smaller than root's key </br>
+right subtree contains only nodes greater than root's key </br>
+left subtree and right subtree are also binary search tree
 
 * 95 Validate Binary Search Tree
  => recursion 傳入 lowerbound and upperbound
