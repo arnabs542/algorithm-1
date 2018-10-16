@@ -1,6 +1,6 @@
 # Binary Tree
 ## Review
-* #93
+* #93, #900
 
 ## Level Order(BFS)
 ## Pre Order 
@@ -27,8 +27,9 @@
 * 453 Flatten Binary Tree to Linked List
  => 紀錄最後一個點, 才能把right的部分接進來
 
- 900. Closest Binary Search Tree Value
- => 求出 lowerBound 和 upperBound。即 < target 的最大值和 >= target 的最小值, 再做比較
+* 900 Closest Binary Search Tree Value
+=>
+=> 求出 lowerBound 和 upperBound。即 < target 的最大值和 >= target 的最小值, 再做比較
 
  902. Kth Smallest Element in a BST
  => inorder traverse 先找到最小的 O(h) 樹高
