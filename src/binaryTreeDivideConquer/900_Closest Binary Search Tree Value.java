@@ -10,6 +10,7 @@
  * }
  */
 
+
 public class Solution {
     /**
      * @param root: the given BST
@@ -74,8 +75,7 @@ public class Solution {
 }
 
 
-//以下為 in-order traversal 的化，时间复杂度会是 o(n)o(n) 并不是最优的。
-//另外复杂度也不是 O(logn)O(logn) 因为BST 并不保证树高是 logn 的。
+
 public class Solution {
     /**
      * @param root: the given BST
