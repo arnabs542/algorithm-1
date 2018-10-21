@@ -30,26 +30,22 @@
  => only (LCA == null) 才算是答案
  
 ## Binary Search Tree
-=> left subtree contains only nodes smaller than root's key 
-=> right subtree contains only nodes greater than root's key 
-=> left subtree and right subtree are also binary search tree
+=> left subtree contains only nodes smaller than root's key </br>
+=> right subtree contains only nodes greater than root's key </br>
+=> left subtree and right subtree are also binary search tree </br>
 
 * 95 Validate Binary Search Tree
  => recursion 傳入 lowerbound and upperbound
  
 * 900 Closest Binary Search Tree Value
-
- 902. Kth Smallest Element in a BST
+* 902 Kth Smallest Element in a BST
  => inorder traverse 先找到最小的 O(h) 樹高
  => 計算經過的k 的個樹, 找到第k小的 O(k)
  => O(h+k)
 
- 
+* 915 Inorder Predecessor in BST
 
-915. Inorder Predecessor in BST
-https://www.jiuzhang.com/solution/inorder-predecessor-in-bst/
-
-701. Trim a Binary Search Tree
+* 701 Trim a Binary Search Tree
 => 判斷root是否在區間內,
 => 在區間內, root.left, root.right各自下去
 => 不再區間內, 判斷要trim left or right
