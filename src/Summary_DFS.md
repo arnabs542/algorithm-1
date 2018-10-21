@@ -47,6 +47,9 @@ public void DFS(List<String> result,
 
 ```
 * 17 Subsets
+* 135 Combination Sum </br>
+=> 可重複使用candidates, 且candidates有重複 </br>
+=> recursion (i) instead of (i + 1) </br>
 
 
 ## DFS - permutation
