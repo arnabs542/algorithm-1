@@ -1,9 +1,8 @@
 ## DFS
 
-/////////////////////////////
-// DFS on Tree - inorder travesal
-/////////////////////////////
+# DFS on Tree - inorder travesal
 
+```java
 public void inoder(TreeNode root, List<Integer> result){
   if (root == null){
     return;
@@ -13,13 +12,11 @@ public void inoder(TreeNode root, List<Integer> result){
   result.add(root);
   inorder(root.right, result);
 }
+```
+# DFS - combination
+組合: 選過不用再選 (need start index)
 
-
-/////////////////////////////
-// DFS - combination 
-// (need start index)
-// 組合: 選過不用再選
-/////////////////////////////
+``` java
 public void DFS(List<String> result,
                 List<String> subset,
                 char[] chars,
@@ -44,14 +41,13 @@ public void DFS(List<String> result,
       }
 }
 
+```
 
-
-/////////////////////////////
-// DFS - permutation
-// 排列: no start index, 用一個boolean[題目的長度]紀錄哪個點已經走過)
-/////////////////////////////
+## DFS - permutation
+// 排列: no start index, 用一個boolean[題目的長度]紀錄哪個點已經走過) </br>
 // 題目中有重複的話, 先sort
 
+```java
 private void DFS(List<String> result,
                  List<String> subset,
                  char[] chars,
@@ -91,4 +87,4 @@ private void DFS(List<String> result,
   }
   
 }
-  
+``` 
