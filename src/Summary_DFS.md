@@ -22,14 +22,17 @@ public void DFS(List<String> result,
                 char[] chars,
                 int startIndex
                 ){
-    // 終止條件 1 or 2
-    // 1. if startIndex 到了備選答案的最後
+    // 終止條件 1 or 2 or 3
+    // 1. 全部組合 不限答案長度
+    result.add(new ArrayList<String>(subset));
+    
+    // or 2. if startIndex 到了備選答案的最後
     if (startIndex == chars.length){
       result.add(new ArrayList<String>(subset));
       return;
     }
     
-    // or 2. 如果要找k個數中找n個組合, 終止條件: subset.size（） == n
+    // or 3. 如果要找k個數中找n個組合, 終止條件: subset.size（） == n
     if (subset.size() == n){
       result.add(new ArrayList<String>(subset));
       return;
@@ -43,6 +46,8 @@ public void DFS(List<String> result,
 }
 
 ```
+* 17 Subsets
+
 
 ## DFS - permutation
 // 排列: no start index, 用一個boolean[題目的長度]紀錄哪個點已經走過) </br>
