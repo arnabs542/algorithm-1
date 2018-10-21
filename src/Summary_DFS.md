@@ -22,13 +22,14 @@ public void DFS(List<String> result,
                 char[] chars,
                 int startIndex
                 ){
-    // 終止條件: startIndex 到了備選答案的最後
+    // 終止條件 1 or 2
+    // 1. if startIndex 到了備選答案的最後
     if (startIndex == chars.length){
       result.add(new ArrayList<String>(subset));
       return;
     }
     
-    // 如果要找k個數中找n個組合, 終止條件: subset.size（） == n
+    // or 2. 如果要找k個數中找n個組合, 終止條件: subset.size（） == n
     if (subset.size() == n){
       result.add(new ArrayList<String>(subset));
       return;
