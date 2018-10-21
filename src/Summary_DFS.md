@@ -53,7 +53,7 @@ public void DFS(List<String> result,
 => 可重複使用candidates, 且candidates有重複 </br>
 => recursion (i) instead of (i + 1) </br>
 
-* 153. Combination Sum II
+* 153 Combination Sum II
 => candidates有重複, 有幾個重複才能用幾個 </br>
 
 /////
