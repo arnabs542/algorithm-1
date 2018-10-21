@@ -1,6 +1,6 @@
-## DFS
+# DFS
 
-# DFS on Tree - inorder travesal
+## DFS on Tree - inorder travesal
 
 ```java
 public void inoder(TreeNode root, List<Integer> result){
@@ -13,7 +13,7 @@ public void inoder(TreeNode root, List<Integer> result){
   inorder(root.right, result);
 }
 ```
-# DFS - combination
+## DFS - combination
 組合: 選過不用再選 (need start index)
 
 ``` java
