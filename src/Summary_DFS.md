@@ -1,4 +1,6 @@
-# DFS
+# DFS 
+## Review
+136. Palindrome Partitioning </br>
 
 ## DFS on Tree - inorder travesal
 
@@ -55,8 +57,11 @@ public void DFS(List<String> result,
 
 * 153 Combination Sum II
 => candidates有重複, 有幾個重複才能用幾個 </br>
-
 /////
+90. k Sum II  </br>
+136. Palindrome Partitioning </br>
+=> 加入記憶化搜索
+
 
 
 
