@@ -3,6 +3,8 @@
 136. Palindrome Partitioning </br>
 
 ## DFS on Tree - inorder travesal
+用分治法解决二叉树问题的时间复杂度：O(二叉树节点个数 * 每个节点的计算时间)
+举例：二叉树最大深度。二叉树节点个数为 N，每个节点上的计算时间为 O(1)。总的时间复杂度为 O(N)
 
 ```java
 public void inoder(TreeNode root, List<Integer> result){
