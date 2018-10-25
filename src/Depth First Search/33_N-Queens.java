@@ -1,74 +1,78 @@
-// 1, 2, 3, 4 不能相鄰?
-
 public class Solution {
     /*
      * @param n: The number of queens
      * @return: All distinct solutions
      */
     public List<List<String>> solveNQueens(int n) {
-        if (n == 0){
-            return new ArrayList<>();
-        }
-        
-        List<List<String>> stringResult = new ArrayList<>();
-        dfs(stringResult, new ArrayList<Integer>(), n);
-
-        return stringResult;
+        //r0,r1,r2,r3  
+        //[1, 3, 0, 4]
+        List<List<String>> result = new ArrayList<>();
+        DFS(n, result, new ArrayList<Integer>(), 0);
+        return result;
     }
     
-    private void dfs(
-            List<List<String>> result
-            , List<Integer> subset
-            , int n
-        ){
-        
+    private void DFS(int n,
+                    List<List<String>> result,
+                    List<Integer> subset,
+                    int nextCol
+                    ){
         if (subset.size() == n){
-            result.add(buildString(subset));
+            result.add(new ArrayList<String>(generateResult(n, subset)));
             return;
         }
         
-        for (int col = 0; col < n; col ++){
-            if (!isValid(col, subset)){
+        for (int i = 0; i < n; i ++){
+            if (!isValid(n, subset, i)){
                 continue;
             }
-            subset.add(col);
-            dfs(result, subset, n);
+            
+            subset.add(i);
+            DFS(n, result, subset, i);
             subset.remove(subset.size() - 1);
         }
     }
-
-    private boolean isValid(int nextCol, List<Integer> subset){
-        int nextRow = subset.size();
-        for (int row = 0; row < subset.size(); row ++){
-            int col = subset.get(row);
-            if (col == nextCol || row == nextRow){
-                return false;
+                    
+    private List<String> generateResult(int n,
+                            List<Integer> subset){
+        List<String> subsetString = new ArrayList<String>();
+        
+        for (int j = 0; j < subset.size(); j ++){
+            String s = "";
+            int q = subset.get(j);
+            for (int i = 0; i < n; i ++){
+                if (i == q){
+                    s = s + "Q";
+                } else{
+                    s = s + ".";
+                }
             }
-            if ((col - row) == (nextCol - nextRow)){
-                return false;
-            }
-            if ((col + row) == (nextCol + nextRow)){
-                return false;
-            }
-        }
-        return true;
-    }
-    
-    // [0, 1, 2, 3]
-    private List<String> buildString(List<Integer> subset){
-        List<String> subsetString = new ArrayList<>();
-        for (int i = 0; i < subset.size(); i ++){
-            int qPosition = subset.get(i);
-            StringBuilder sb = new StringBuilder();
-            for (int j = 0; j < subset.size(); j ++){
-                if (qPosition == j){
-                        sb.append("Q");
-                    }else{
-                        sb.append(".");
-                    }
-            }
-            subsetString.add(sb.toString());
+            subsetString.add(s);
         }
         return subsetString;
+                    
+    }
+    
+    private boolean isValid(int n,
+                    List<Integer> subset,
+                    int nextCol){
+        int nextRow = subset.size();
+
+        for (int i = 0; i < subset.size(); i ++){
+            int col = subset.get(i);
+            int row = i;
+            if (nextCol == col){
+                return false;
+            }
+            
+            if (nextCol + nextRow == col + row){
+                return false;
+            }
+            
+            if (nextCol - nextRow == col - row){
+                return false;
+            }
+        }
+        
+        return true;
     }
 }
