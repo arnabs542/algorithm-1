@@ -130,5 +130,8 @@ ToDo:
 * 107 Word Break
 * 582 Word Break II
 
+* 828 Word Pattern
+* 829 Word Pattern II
+
 
 
