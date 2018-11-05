@@ -127,4 +127,8 @@ ToDo:
 190. Next Permutation II
 
 ## Word related questions
+* 107 Word Break
+* 582 Word Break II
+
+
 
