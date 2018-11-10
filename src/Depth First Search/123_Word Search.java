@@ -12,9 +12,11 @@ public class Solution {
     public boolean exist(char[][] board, String word) {
         for (int i = 0; i < board.length; i ++){
             for (int j = 0; j < board[0].length; j ++){
-                DFS(board, word, i, j, 0);
-                if (this.isExist){
-                    break;
+                if (word.charAt(0) == board[i][j]){
+                    DFS(board, word, i, j, 0);
+                    if (this.isExist){
+                        break;
+                    }
                 }
             }
         }
@@ -45,6 +47,7 @@ public class Solution {
             board[x][y] = '#';
             DFS(board, word, x + xMove[i], y + yMove[i], wordIndex + 1);
             board[x][y] = word.charAt(wordIndex);
+            if (this.isExist) break;
         }
     }
 }
