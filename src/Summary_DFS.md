@@ -136,3 +136,6 @@ ToDo:
 * 120 Word Ladder (BFS)
 * 121 Word Ladder II (DFS)
 
+* 123 Word Search
+* 132 Word Search II (DFS + trie)
+
