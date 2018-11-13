@@ -5,6 +5,8 @@
 * pop O(1)
 * BFS
 * Sliding Window
+** 642. Moving Average from Data Stream
+
 
 ## Trie
 O(L) // L: word length
