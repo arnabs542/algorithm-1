@@ -3,6 +3,7 @@
 * push O(1)
 * top O(1)
 * pop O(1)
+* Sliding Window
 
 ## Trie
 O(L) // L: word length
