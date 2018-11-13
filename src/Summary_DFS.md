@@ -128,7 +128,7 @@ ToDo:
 
 ## Word related questions
 * 107 Word Break
-* 582 Word Break II
+* 582 Word Break II </br>
 
 * 828 Word Pattern
 * 829 Word Pattern II
@@ -138,4 +138,6 @@ ToDo:
 
 * 123 Word Search
 * 132 Word Search II (DFS + trie)
+* 634 Word Squares (DFS + trie)
+
 
