@@ -33,7 +33,7 @@
 => left subtree contains only nodes smaller than root's key </br>
 => right subtree contains only nodes greater than root's key </br>
 => left subtree and right subtree are also binary search tree </br>
-=> inorder
+=> inorder, preporder
 
 * 95 Validate Binary Search Tree
  => recursion 傳入 lowerbound and upperbound
