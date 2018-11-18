@@ -22,4 +22,8 @@ O(L) // L: word length
 * 422 Implement Trie
 * 473 Add and Search Word - Data structure design
 
+## Hash
+* 128 Hash Function
+
+
 
