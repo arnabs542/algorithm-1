@@ -1,3 +1,4 @@
+// insert to last
 public class LRUCache {
 
     private class Node{
@@ -77,3 +78,7 @@ public class LRUCache {
         tailNode.prev = newNode;
     }
 }
+
+
+
+// insert to head
