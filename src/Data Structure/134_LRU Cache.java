@@ -1,4 +1,4 @@
-// insert to last
+// solution 1: insert to last
 public class LRUCache {
 
     private class Node{
@@ -81,4 +81,4 @@ public class LRUCache {
 
 
 
-// insert to head
+// solution 2: insert to head
