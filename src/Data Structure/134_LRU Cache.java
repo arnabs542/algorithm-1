@@ -158,3 +158,85 @@ public class LRUCache {
         temp.prev = curr;
     }
 }
+
+// solution 3: use singly linked list
+// hashmap存的是<key, 前一個節點>
+class ListNode{
+    public int key;
+    public int value;
+    public ListNode next;
+    public ListNode(int key, int val){
+        this.key = key;
+        this.value = val;
+        this.next = null;
+    }
+}
+public class LRUCache {
+    /*
+    * @param capacity: An integer
+    */
+    private int capacity;
+    private ListNode head, tail;
+    private Map<Integer, ListNode> keyToPrev = new HashMap<>();
+    public LRUCache(int capacity) {
+        this.capacity = capacity;
+        head = new ListNode(-1, -1);
+        tail = new ListNode(-1, -1);
+        head.next = tail;
+        keyToPrev.put(-1, head);
+    }
+
+    /*
+     * @param key: An integer
+     * @return: An integer
+     */
+    public int get(int key) {
+        if (!keyToPrev.containsKey(key)){
+            return -1;
+        }
+        
+        if (head.next.key == key){
+            return head.next.value;
+        }
+        //1. 斷開, 把前後連起來
+        ListNode prev = keyToPrev.get(key);
+        ListNode curr = prev.next; 
+        prev.next = curr.next;
+        keyToPrev.put(curr.next.key, prev);
+        
+        //2. insert to head
+        moveToHead(curr);
+        return curr.value;
+    }
+
+    /*
+     * @param key: An integer
+     * @param value: An integer
+     * @return: nothing
+     */
+    public void set(int key, int value) {
+        if (get(key) != -1){
+            keyToPrev.get(key).next.value = value;
+            return;
+        }
+        
+        if (keyToPrev.size() == capacity + 1){
+            System.out.println(keyToPrev.size());
+            ListNode end = keyToPrev.get(-1);
+            keyToPrev.put(-1, keyToPrev.get(end.key));
+            keyToPrev.get(end.key).next = tail;
+            keyToPrev.remove(end.key);
+        }
+        
+        ListNode curr = new ListNode(key, value);
+        moveToHead(curr);
+    }
+    
+    private void moveToHead(ListNode curr){
+        ListNode temp = head.next;
+        head.next = curr;
+        curr.next = temp;
+        keyToPrev.put(curr.key, head);
+        keyToPrev.put(temp.key, curr);
+    }
+}
