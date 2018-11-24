@@ -24,6 +24,8 @@ O(L) // L: word length
 
 ## Hash
 * 128 Hash Function
+* 657 Insert Delete GetRandom O(1)
+* 134 LRU Cache
 
 
 
