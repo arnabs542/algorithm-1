@@ -82,3 +82,79 @@ public class LRUCache {
 
 
 // solution 2: insert to head
+class ListNode{
+    public int key;
+    public int value;
+    public ListNode next;
+    public ListNode prev;
+    public ListNode(int key, int val){
+        this.key = key;
+        this.value = val;
+    }
+}
+
+public class LRUCache {
+    /*
+    * @param capacity: An integer
+    */
+    ListNode head = new ListNode(-1, -1);
+    ListNode tail = new ListNode(-1, -1);
+    Map<Integer, ListNode> hm = new HashMap<>();
+    int capacity;
+    public LRUCache(int capacity) {
+        this.capacity = capacity;
+        head.next = tail;
+    }
+
+    /*
+     * @param key: An integer
+     * @return: An integer
+     */
+    public int get(int key) {
+        if (!hm.containsKey(key)){
+            return -1;
+        }
+        
+        ListNode curr = hm.get(key);
+        if (head.next == curr){
+            return curr.value;
+        }
+        
+        // 先斷開
+        curr.prev.next = curr.next;
+        curr.next.prev = curr.prev;
+        // 插入頭
+        insertToHead(curr);
+        return curr.value;
+    }
+
+    /*
+     * @param key: An integer
+     * @param value: An integer
+     * @return: nothing
+     */
+    public void set(int key, int value) {
+        if (get(key) != -1){
+            hm.get(key).value = value;
+            return;
+        }
+        
+        ListNode curr = new ListNode(key, value);
+        if (hm.size() == capacity){
+            hm.remove(tail.prev.key);
+            tail.prev.prev.next = tail;
+            tail.prev = tail.prev.prev;
+        }
+        
+        hm.put(key, curr);
+        insertToHead(curr);
+    }
+    
+    private void insertToHead(ListNode curr){
+        ListNode temp = head.next;
+        head.next = curr;
+        curr.prev = head;
+        curr.next = temp;
+        temp.prev = curr;
+    }
+}
