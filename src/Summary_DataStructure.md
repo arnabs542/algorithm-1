@@ -27,7 +27,7 @@ O(L) // L: word length
 * 134 LRU Cache
 
 * 657 Insert Delete GetRandom O(1)
-* 954. Insert Delete GetRandom O(1) - Duplicates allowed
+* 954 Insert Delete GetRandom O(1) - Duplicates allowed
 https://www.jiuzhang.com/solutions/insert-delete-getrandom-o1-duplicates-allowed/
 
 
