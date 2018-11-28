@@ -30,6 +30,13 @@ O(L) // L: word length
 * 954 Insert Delete GetRandom O(1) - Duplicates allowed
 https://www.jiuzhang.com/solutions/insert-delete-getrandom-o1-duplicates-allowed/
 
+* 209 First Unique Character in a String
+* 960 First Unique Number in a Stream II
+
+DataStream questions
+https://www.lintcode.com/problem/?tag=data-stream
+
+
 
 
 
