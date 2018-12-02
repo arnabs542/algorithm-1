@@ -1,3 +1,5 @@
+// O(nlogk)
+// 總共n個數, k個練表(priority queue的大小)
 /**
  * Definition for ListNode.
  * public class ListNode {
@@ -30,6 +32,7 @@ public class Solution {
         
         ListNode dummy = new ListNode(0);
         ListNode curr = dummy;
+        
         while(!pq.isEmpty()){
             ListNode node = pq.poll();
             curr.next = node;
