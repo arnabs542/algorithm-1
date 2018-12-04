@@ -1,4 +1,4 @@
-// O(nlogk)
+// Solution 1) Priority Queue: O(nlogk)
 // 總共n個數, k個練表(priority queue的大小)
 /**
  * Definition for ListNode.
@@ -51,3 +51,8 @@ public class Solution {
         }
     };
 }
+
+// Solution 2) 兩倆合併, merge 2 sorted list: O(nlogk) 
+
+// Solution 3) Merge sort 歸併排序 O(nlogk)
+
