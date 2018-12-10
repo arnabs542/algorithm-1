@@ -14,14 +14,16 @@ n = A1.length + A2.length
 => 剩下的再全部放入結果
 
 ## Merge k sorted Array/List/Intervals O(nlog(k)) 
-Sol 1.) priorityqueue
-Queue<T> q = new PriorityQueue<T>();
+### Sol 1.) priorityqueue
+Queue<T> q = new PriorityQueue<T>(); </br>
 
-=> 把 K rows 的第一個element都放入PriorityQueue
-=> while(!q.isEmpty()){ 
+=> 把 K rows 的第一個element都放入PriorityQueue </br>
+``` java
+while(!q.isEmpty()){  
     q.poll()
     q.offer(poll出那一列的下個element)
-    }
+}
+```
 
 /////////////////////////////////////////
 ////////  sweep line   ///////
