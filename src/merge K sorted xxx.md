@@ -21,7 +21,7 @@ Queue<T> q = new PriorityQueue<T>(); </br>
 ``` java
 while(!q.isEmpty()){   // O(n)
     q.poll()           // O(logk)
-    q.offer(poll出那一列的下個element)O(logk)
+    q.offer(poll出那一列的下個element) //O(logk)
 }
 ```
 
