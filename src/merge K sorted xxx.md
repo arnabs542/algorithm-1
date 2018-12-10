@@ -1,8 +1,7 @@
-# Merge Sorted
+# Merge Sorted Array/List/Intervals
 
-////////////////////////////////////////////////////////
-////////  merge 2 sorted array/ list/ intervals  ///////
-////////////////////////////////////////////////////////
+## Merge 2 sorted Array/List/Intervals O(n) 
+n = A1.length + A2.length
 
 6. Merge Two Sorted Arrays
 839. Merge Two Sorted Interval Lists
