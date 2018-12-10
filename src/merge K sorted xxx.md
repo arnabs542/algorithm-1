@@ -13,11 +13,8 @@ n = A1.length + A2.length
   }
 => 剩下的再全部放入結果
 
-////////////////////////////////////////
-////////  merge K sorted array  ////////
-////////////////////////////////////////
-
-=> priorityqueue
+## Merge k sorted Array/List/Intervals O(nlog(k)) 
+Sol 1.) priorityqueue
 Queue<T> q = new PriorityQueue<T>();
 
 => 把 K rows 的第一個element都放入PriorityQueue
