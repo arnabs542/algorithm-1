@@ -19,9 +19,9 @@ Queue<T> q = new PriorityQueue<T>(); </br>
 
 => 把 K rows 的第一個element都放入PriorityQueue </br>
 ``` java
-while(!q.isEmpty()){  
-    q.poll()
-    q.offer(poll出那一列的下個element)
+while(!q.isEmpty()){   // O(n)
+    q.poll()           // O(logk)
+    q.offer(poll出那一列的下個element)O(logk)
 }
 ```
 
