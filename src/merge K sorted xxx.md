@@ -3,9 +3,9 @@
 ## Merge 2 sorted Array/List/Intervals O(n) 
 n = A1.length + A2.length
 
-6. Merge Two Sorted Arrays
-839. Merge Two Sorted Interval Lists
-165. Merge Two Sorted Lists
+* 6 Merge Two Sorted Arrays
+* 839 Merge Two Sorted Interval Lists
+* 165 Merge Two Sorted Lists
 
 => 設定counter, i for array1, j for array2
 => while ( i < A1.length && j < A2.length){
