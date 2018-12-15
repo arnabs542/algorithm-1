@@ -8,11 +8,18 @@ n = A1.length + A2.length
 * 165 Merge Two Sorted Lists
 
 ```java
-/* 設定counter, i for array1, j for array2 
-    while ( i < A1.length && j < A2.length){
+/* 1. 設定counter, i for array1, j for array2 
+   2. while ( i < A1.length && j < A2.length){
         比大小, 小的先放入結果
-    }
-*/ 剩下的再全部放入結果
+      }
+   3.剩下的再全部放入結果
+   while ( i < A1.length ){
+    不用比, 全部放入
+   }
+   while ( j < A2.length ){
+    不用比, 全部放入
+   }
+*/ 
 ```
 ## Merge k sorted Array/List/Intervals O(nlog(k)) 
 ### Sol 1.) priorityqueue
