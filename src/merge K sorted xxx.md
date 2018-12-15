@@ -12,7 +12,7 @@ n = A1.length + A2.length
    2. while ( i < A1.length && j < A2.length){
         比大小, 小的先放入結果
       }
-   3.剩下的再全部放入結果
+   3. 剩下的再全部放入結果
    while ( i < A1.length ){
     不用比, 全部放入
    }
