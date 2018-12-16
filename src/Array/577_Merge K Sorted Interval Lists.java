@@ -1,48 +1,71 @@
+/**
+ * Definition of Interval:
+ * public classs Interval {
+ *     int start, end;
+ *     Interval(int start, int end) {
+ *         this.start = start;
+ *         this.end = end;
+ *     }
+ * }
+ */
+class Element{
+    public int row;
+    public int col;
+    public Interval interval;
+    public Element(int row, int col, Interval interval){
+        this.row = row;
+        this.col = col;
+        this.interval = interval;
+    }
+}
+
 public class Solution {
     /**
-     * @param arrays: k sorted integer arrays
-     * @return: a sorted array
+     * @param intervals: the given k sorted interval lists
+     * @return:  the new sorted interval list
      */
-    public class Element{
-        int row;
-        int col;
-        int val;
-        public Element(int row, int col, int val){
-            this.row = row;
-            this.col = col;
-            this.val = val;
+     
+    private Comparator intervalCompare = new Comparator<Element>(){
+        public int compare(Element elem1, Element elem2){
+            return elem1.interval.start - elem2.interval.start;
         }
-    }
-
-    private Comparator<Element> ElementComparator = new Comparator<Element>(){
-        public int compare(Element element1, Element element2){
-            return element1.val - element2.val;
-        }   
     };
     
-    public int[] mergekSortedArrays(int[][] arrays) {
-        Queue<Element> q = new PriorityQueue<Element>(arrays.length, ElementComparator);
-        
-        int resultLength = 0;
-        for (int i = 0; i < arrays.length; i++){
-            if (arrays[i].length == 0){
+    List<Interval> result = new ArrayList<Interval>();
+    Interval last;
+    
+    public List<Interval> mergeKSortedIntervalLists(List<List<Interval>> intervals) {
+        Queue<Element> q = new PriorityQueue<Element>(intervals.size(), intervalCompare);
+        for(int i = 0; i <intervals.size(); i ++){
+            if (intervals.get(i) == null || intervals.get(i).size() == 0){
                 continue;
             }
-            q.offer(new Element(i, 0, arrays[i][0]));
-            resultLength = resultLength + arrays[i].length;
+            q.offer(new Element(i, 0, intervals.get(i).get(0))); 
         }
         
-        int[] result = new int[resultLength];
-        int index = 0;
         while(!q.isEmpty()){
             Element thisElement = q.poll();
-            result[index] = thisElement.val;
-            index++;
-            if (thisElement.col < arrays[thisElement.row].length -1){
-                q.offer(new Element(thisElement.row, thisElement.col + 1, arrays[thisElement.row][thisElement.col + 1]));
+            merge(thisElement.interval);
+            if (thisElement.col + 1 < intervals.get(thisElement.row).size()){
+                q.offer(new Element(thisElement.row, thisElement.col + 1,  intervals.get(thisElement.row).get(thisElement.col + 1)));
             }
         }
         
         return result;
+    }
+    
+    private void merge(Interval curr){
+        if (result.size() == 0){
+            last = curr;
+            result.add(last);
+        } else {
+            if (curr.start > last.end){
+                last = curr;
+                result.add(last);
+            } else {
+                last.start = Math.min(curr.start, last.start);
+                last.end = Math.max(curr.end, last.end);    
+            }
+        }
     }
 }
