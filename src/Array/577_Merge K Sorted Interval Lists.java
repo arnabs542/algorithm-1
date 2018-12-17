@@ -1,3 +1,5 @@
+// Sol 1.
+
 /**
  * Definition of Interval:
  * public classs Interval {
@@ -68,4 +70,85 @@ public class Solution {
             }
         }
     }
+}
+
+
+// Sol 2.
+
+
+/**
+ * Definition of Interval:
+ * public classs Interval {
+ *     int start, end;
+ *     Interval(int start, int end) {
+ *         this.start = start;
+ *         this.end = end;
+ *     }
+ * }
+ */
+
+public class Solution {
+    /**
+     * @param intervals: the given k sorted interval lists
+     * @return:  the new sorted interval list
+     */
+    
+    public List<Interval> mergeKSortedIntervalLists(List<List<Interval>> intervals) {
+        return divide(0, intervals.size() -1, intervals);
+    }
+    
+    private List<Interval> divide(int start, int end, List<List<Interval>> intervals){
+        if (start >= end){
+            return intervals.get(start);
+        }
+        int mid = (start + end)/2;
+        List<Interval> left = divide(start, mid, intervals);
+        List<Interval> right = divide(mid + 1, end, intervals);
+
+        return merge(left, right);
+    }
+    
+    private List<Interval> merge(List<Interval> left, List<Interval> right){
+        List<Interval> result = new ArrayList<Interval>();
+        int l = 0;
+        int r = 0;
+        while(l < left.size() && r < right.size()){
+            if (left.get(l).start < right.get(r).start){
+                generateResult(left.get(l), result);
+                l ++;
+            } else {
+                generateResult(right.get(r), result);
+                r ++;
+            }
+        }
+        
+        while (l < left.size()){
+            generateResult(left.get(l), result);
+            l ++;
+        }
+        
+        while (r < right.size()){
+            generateResult(right.get(r), result);
+            r ++;
+        }
+        
+        return result;
+    }
+    
+    private void generateResult(Interval curr, List<Interval> result){
+        if (result.size() == 0){
+            result.add(curr);
+        } else {
+            Interval last = result.get(result.size() - 1);
+            if (curr.start > last.end){
+                result.add(curr);
+            } else {
+                last.start = Math.min(curr.start, last.start);
+                last.end = Math.max(curr.end, last.end);
+            }
+        }
+        
+        //return result;
+    }
+    
 }
