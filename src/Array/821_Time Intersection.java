@@ -8,14 +8,23 @@
  *     }
  * }
  */
-class Event {
-    public static final int EVENT_TYPE_IN = 1;
-    public static final int EVENT_TYPE_OUT = -1; 
-    int time;
-    int type;
+
+class Event implements Comparable<Event>{
+    static final int Event_START = 1;
+    static final int Event_END = -1;
+
+    public int time;
+    public int type;
     public Event(int time, int type){
         this.time = time;
         this.type = type;
+    }
+    
+    public int compareTo(Event event){
+        if (event.time == this.time){
+            return this.type - event.type;
+        }
+        return this.time - event.time;
     }
 }
 public class Solution {
@@ -24,38 +33,39 @@ public class Solution {
      * @param seqB: the list of intervals
      * @return: the time periods
      */
-    static final int EVENT_TYPE_IN = 1;
-    static final int EVENT_TYPE_OUT = -1;
     public List<Interval> timeIntersection(List<Interval> seqA, List<Interval> seqB) {
+        List<Event> eventList = new ArrayList<Event>();
+        
+        for (Interval seq: seqA){
+            eventList.add(new Event(seq.start, Event.Event_START));
+            eventList.add(new Event(seq.end, Event.Event_END));
+        }
+        
+        for (Interval seq: seqB){
+            eventList.add(new Event(seq.start, Event.Event_START));
+            eventList.add(new Event(seq.end, Event.Event_END));
+        }
+        
+        Collections.sort(eventList);
         
         List<Interval> result = new ArrayList<Interval>();
-        List<Event> eventList = new ArrayList<Event>();
-        for (Interval interval: seqA){
-            eventList.add(new Event(interval.start, Event.EVENT_TYPE_IN));
-            eventList.add(new Event(interval.end, Event.EVENT_TYPE_OUT));
-        }
         
-        for (Interval interval: seqB){
-            eventList.add(new Event(interval.start, Event.EVENT_TYPE_IN));
-            eventList.add(new Event(interval.end, Event.EVENT_TYPE_OUT));
-        }
-        
-        eventList.sort(Comparator.comparing((Event event) -> event.time));
         int count = 0;
-        Interval last = new Interval(0, 0);;
-        for (Event event : eventList){
+        Interval last = new Interval(0, 0);
+        for (Event event: eventList){
             count = count + event.type;
-            if (event.type == Event.EVENT_TYPE_IN && count == 2){ // both users are online
+
+            if (event.type == Event.Event_END && count == 1){ // end of both user online
+                last.end = event.time;
+                result.add(new Interval(last.start, event.time));
+            }
+            
+            if (event.type == Event.Event_START && count == 2){ // start of both user online
                 last.start = event.time;
             }
             
-            if (event.type == Event.EVENT_TYPE_OUT && count == 1){ // end of both user online
-                last.end = event.time;
-                result.add(new Interval(last.start, last.end));
-            }
         }
         
         return result;
-    
     }
 }
