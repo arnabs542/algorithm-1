@@ -22,6 +22,11 @@ n = A1.length + A2.length
 */ 
 ```
 ## Merge k sorted Array/List/Intervals O(nlog(k)) 
+* 486 Merge K Sorted Arrays
+* 104 Merge K Sorted Lists
+* 839 Merge Two Sorted Interval Lists
+
+
 ### Sol 1.) priorityqueue
 Queue<T> q = new PriorityQueue<T>(); </br>
 
@@ -32,18 +37,39 @@ while(!q.isEmpty()){   // O(n)
     q.offer(poll出那一列的下個element) //O(logk)
 }
 ```
+### Sol 2.) divide & conquer
+``` java
+private divide(int start, int end){
+   if (start >= end){
+      return start那方的;
+   }
+   int mid = (start + end)/2;
+   left = divide(start, mid);
+   right = divide(mid + 1, end);
+   return merge(left, right);
+}
 
-/////////////////////////////////////////
-////////  sweep line   ///////
-////////////////////////////////////////
-391. Number of Airplanes in the Sky
-821. Time Intersection
+private merge(left, right){
+   .....
+}
+```
+
+
+## sweep line
+### 将起点和终点打散排序
+<start, +1>
+<end, - 1>
+将起点和终点打散排序
+* 391 Number of Airplanes in the Sky
 => create new class for the event, 轉換input data to List<Event> eventList
 => Event(int time, int type) 
 => type: in: 1; out -1;
 => eventList.sort(Comparator.comparing((event e) -> e.time))
 => loop through eventList
 
-821. Time Intersection
+* 821. Time Intersection
 => 如果使用者上線 && count == 2, 记录下这个时间, 作为两个用户都在线的起点
 => 如果使用者下線 && count == 1, 记录下这个时间, 作为两个用户都在线的終點, 放入結果
+
+* 131. The Skyline Problem
+
