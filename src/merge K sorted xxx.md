@@ -74,12 +74,15 @@ private merge(left, right){
 => 如果使用者上線 && count == 2, 记录下这个时间, 作为两个用户都在线的起点 </br>
 => 如果使用者下線 && count == 1, 记录下这个时间, 作为两个用户都在线的終點, 放入結果 </br>
 
-* 131. The Skyline Problem
+* 131 The Skyline Problem
 ``` java
-// => Sweep Line + TreeSet
+// Sweep Line + TreeSet
 // ts<buildingNo, height> 
 // ts 從小到大排序, 排序順序 height > building
 // ts.last()取得最大的高度
+// 大樓起點 => ts.add()
+// 大樓終點 => ts.remove()
+// TreeSet also provides function to remove a specific item.
 ``` 
 
 
