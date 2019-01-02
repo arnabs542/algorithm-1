@@ -17,7 +17,7 @@
 ## Median
 => find kth
 
-* 461 Kth Smallest Numbers in Unsorted Array
-* 606 Kth Largest Element II
+* 461 Kth Smallest Numbers in Unsorted Array (quick select)
+* 606 Kth Largest Element II (quick select)
 
-* 65 Median of two Sorted Arrays
+* 65 Median of two Sorted Arrays (去掉一半的答案)
