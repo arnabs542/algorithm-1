@@ -18,4 +18,6 @@
 => find kth
 
 * 461 Kth Smallest Numbers in Unsorted Array
+* 606 Kth Largest Element II
+
 * 65 Median of two Sorted Arrays
