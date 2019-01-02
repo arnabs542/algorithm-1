@@ -13,3 +13,8 @@
 ```
 
 * 139 Subarray Sum Closest
+
+## Find Kth 
+
+* 65 Median of two Sorted Arrays
+* 461 Kth Smallest Numbers in Unsorted Array
