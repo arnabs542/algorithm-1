@@ -17,5 +17,5 @@
 ## Median
 => find kth
 
-* 65 Median of two Sorted Arrays
 * 461 Kth Smallest Numbers in Unsorted Array
+* 65 Median of two Sorted Arrays
