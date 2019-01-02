@@ -15,7 +15,7 @@
 * 139 Subarray Sum Closest
 
 ## Median
-=> find kth
+=> find kth (quick select)
 
 ``` java 
 // Quick Select
@@ -27,4 +27,5 @@
 * 5 Kth Largest Element
 
 ---
-* 65 Median of two Sorted Arrays (去掉一半的答案)
+=> find kth (已經排好序, 可以直接2分嘗試去掉不需要的答案)
+* 65 Median of two Sorted Arrays
