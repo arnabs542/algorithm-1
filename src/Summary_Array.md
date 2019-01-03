@@ -15,7 +15,7 @@
 * 139 Subarray Sum Closest
 
 ## Median
-=> find kth (quick select)
+=> find kth (還沒排序, quick select)
 
 ``` java 
 // Quick Select
@@ -28,12 +28,13 @@
 
 ---
 => find kth (已經排好序, 可以直接2分嘗試去掉不需要的答案)
-* 65 Median of two Sorted Arrays
-=> 兩個array 各自去找看看有沒有k/2個數 O(log(m + n))
+* 65 Median of two Sorted Arrays </br>
+Sol 1.) 兩個array 各自去找看看有沒有k/2個數 O(log(m + n)) </br>
+Sol 2.) 2分答案 O(log(m + n)) </br>
 
 * 931 Median of K Sorted Arrays </br>
-Sol 1.) 2分答案 O(log(range) * k(long(n)) </br>
-Sol 2.) priority queue </br>
+Sol 1.) 2分答案, k 個array, 每個array有n個數 => O(log(range) * klogn) </br>
+Sol 2.) priority queue => O(nlogk) </br>
 
 
 
