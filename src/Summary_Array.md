@@ -27,9 +27,15 @@
 * 5 Kth Largest Element
 
 ---
-=> find kth (已經排好序, 可以直接2分嘗試去掉不需要的答案)
+=> find kth (已經排好序, 可以直接嘗試去掉不需要的答案)
 * 65 Median of two Sorted Arrays </br>
-Sol 1.) 兩個array 各自去找看看有沒有k/2個數 O(log(m) + log(n)) </br>
+Sol 1.)  O(log(m + n))
+``` java
+   要找第k大的數
+   兩個array 各自去找前k/2大的數;
+   找到後比大小, 把小的前k/2個數丟掉
+   繼續找 k - k/2個數
+```
 Sol 2.) 2分答案 O(log(range) * (log(m) + log(n))) </br>
 
 * 931 Median of K Sorted Arrays 
