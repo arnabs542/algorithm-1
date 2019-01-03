@@ -31,9 +31,9 @@
 * 65 Median of two Sorted Arrays
 => 兩個array 各自去找看看有沒有k/2個數 O(log(m + n))
 
-* 931 Median of K Sorted Arrays
-Sol 1.) 2分答案 O(log(range) * k(long(n))
-Sol 2.) priority queue
+* 931 Median of K Sorted Arrays </br>
+Sol 1.) 2分答案 O(log(range) * k(long(n)) </br>
+Sol 2.) priority queue </br>
 
 
 
