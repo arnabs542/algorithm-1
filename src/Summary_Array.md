@@ -32,7 +32,8 @@
 Sol 1.) 兩個array 各自去找看看有沒有k/2個數 O(log(m + n)) </br>
 Sol 2.) 2分答案 O(log(m + n)) </br>
 
-* 931 Median of K Sorted Arrays </br>
+* 931 Median of K Sorted Arrays 
+
 Sol 1.) 2分答案 => O(log(range) * klogn)
 ```java
 /* 
@@ -47,7 +48,8 @@ Sol 2.) priority queue => O(nlogk)
    priority queue size: k
    priority queue offer: O(logk)
    priority queue poll: O(logk)
-*/ => O(nlogk)
+   => O(nlogk)
+  */
 ```
 
 
