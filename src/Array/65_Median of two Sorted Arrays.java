@@ -1,3 +1,5 @@
+// 兩個array 各自去找看看有沒有k/2個數
+// O(log(m + n)
 public class Solution {
     /*
      * @param A: An integer array
@@ -36,7 +38,7 @@ public class Solution {
         
         // 比大小, 從小的那個array裡面一次拿掉k/2個數
         if(midA > midB) {
-            return findKth(A, AStartIndex, B, BStartIndex + mid, k - mid);
+            return findKth(A, AStartIndex, B, BStartIndex + mid, k - mid); 
         } 
         
         return findKth(A, AStartIndex + mid, B, BStartIndex, k - mid);
