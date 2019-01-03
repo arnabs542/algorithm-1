@@ -29,8 +29,8 @@
 ---
 => find kth (已經排好序, 可以直接2分嘗試去掉不需要的答案)
 * 65 Median of two Sorted Arrays </br>
-Sol 1.) 兩個array 各自去找看看有沒有k/2個數 O(log(m + n)) </br>
-Sol 2.) 2分答案 O(log(m + n)) </br>
+Sol 1.) 兩個array 各自去找看看有沒有k/2個數 O(log(m) + log(n)) </br>
+Sol 2.) 2分答案 O(log(range) * (log(m) + log(n))) </br>
 
 * 931 Median of K Sorted Arrays 
 
