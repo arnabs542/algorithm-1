@@ -29,3 +29,6 @@
 ---
 => find kth (已經排好序, 可以直接2分嘗試去掉不需要的答案)
 * 65 Median of two Sorted Arrays
+=> 兩個array 各自去找看看有沒有k/2個數
+
+
