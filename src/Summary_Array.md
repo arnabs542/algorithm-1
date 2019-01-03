@@ -33,16 +33,21 @@ Sol 1.) 兩個array 各自去找看看有沒有k/2個數 O(log(m + n)) </br>
 Sol 2.) 2分答案 O(log(m + n)) </br>
 
 * 931 Median of K Sorted Arrays </br>
-Sol 1.) 2分答案, k 個array, 每個array有n個數 => O(log(range) * klogn)
+Sol 1.) 2分答案 => O(log(range) * klogn)
 ```java
+/* 
+   k rows, each array has n element
+   range = max - min
+   O(log(range) * k(log(n)))
+*/
 ```
 Sol 2.) priority queue => O(nlogk)
 ``` java
-// k rows, totall n element
-// priority queue size: k
-// priority queue offer: O(logk)
-// priority queue poll: O(logk)
-// => O(nlogk)
+/* k rows, total n element
+   priority queue size: k
+   priority queue offer: O(logk)
+   priority queue poll: O(logk)
+*/ => O(nlogk)
 ```
 
 
