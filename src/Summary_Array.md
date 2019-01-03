@@ -32,6 +32,7 @@
 => 兩個array 各自去找看看有沒有k/2個數 O(log(m + n))
 
 * 931 Median of K Sorted Arrays
+Solutions:
 1. 2分答案 O(log(range) * k(long(n))
 2. priority queue
 
