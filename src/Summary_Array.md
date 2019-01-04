@@ -1,6 +1,8 @@
 ## SubArrays
 
-* 41 Maximum Subarray
+* 41 Maximum Subarray </br>
+=> max sum - min pre-sum = maxSubArray
+
 * 44 Minimum Subarray
 => 道理同上
 
