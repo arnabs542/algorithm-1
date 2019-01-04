@@ -2,12 +2,13 @@
 find target value in sorted array/list
 
 ## Review
-62. Search in Rotated Sorted Array
+* 62 Search in Rotated Sorted Array
 
-390. Find Peak Element II (2維 - 行列交替二分) O(n+m)
+* 390 Find Peak Element II (2維 - 行列交替二分) O(n+m)
 
 * Fast power
 
+* 633 Find the Duplicate Number
 
 ## Basic template
 457. Classical Binary Search
@@ -140,3 +141,7 @@ n could be >=0 or < 0;
 586. Sqrt(x) II
 
 ## Copy Books
+
+## 2分答案
+＊ 633 Find the Duplicate Number
+
