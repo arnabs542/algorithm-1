@@ -138,11 +138,19 @@ for (int i = 0; i < k; i ++){
 n could be >=0 or < 0;
 
 141. Sqrt(x)
-
-二分答案! 先隨便選一個, 看看大小. mid 取 long * long mid = start + (end - start)/2;
-
+``` java
+/* 二分答案! 
+   先取 mid, 估計mid ^ 2 < or > x
+*/
+```
 586. Sqrt(x) II
-
+``` java
+/* 二分答案! 
+   題目要求return double, 需要考慮 x < 1 的情況, x < 1 的話令x = 1
+   end = Math.max(1, x);
+   esp = 1e-10;(精確度)
+*/
+```
 
 ## Copy Books
 
