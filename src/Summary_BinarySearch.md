@@ -10,6 +10,9 @@ find target value in sorted array/list
 
 * 633 Find the Duplicate Number
 
+* 586 Sqrt(x) II
+
+
 ## Basic template
 457. Classical Binary Search
 ```java
@@ -139,6 +142,7 @@ n could be >=0 or < 0;
 二分答案! 先隨便選一個, 看看大小. mid 取 long * long mid = start + (end - start)/2;
 
 586. Sqrt(x) II
+
 
 ## Copy Books
 
