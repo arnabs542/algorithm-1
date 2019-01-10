@@ -153,9 +153,7 @@ n could be >=0 or < 0;
 ```
 183. Wood Cut
 
+437. Copy Books
 
-## Copy Books
-
-## 2分答案
 ＊ 633 Find the Duplicate Number
 
