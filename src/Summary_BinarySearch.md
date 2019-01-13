@@ -12,6 +12,9 @@ find target value in sorted array/list
 
 * 586 Sqrt(x) II
 
+* 617 Maximum Average Subarray II (to-do)
+
+
 
 ## Basic template
 457. Classical Binary Search
