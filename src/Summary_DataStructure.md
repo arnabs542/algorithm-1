@@ -2,11 +2,22 @@
 ## Queue
 * offer O(1)
 * top O(1)
-* pop O(1)
+* poll O(1)
 * BFS
 ### Sliding Window
 - 642 Moving Average from Data Stream
 - Sliding Window Median (TO DO)
+
+## Deque
+* offerFirst O(1)
+* offerLast O(1)
+* pollFirst O(1)
+* pollLast O(1)
+* peekFirst O(1)
+* peekLast O(1)
+* .size() O(1)
+
+
 
 ## Stack
 * push O(1)
