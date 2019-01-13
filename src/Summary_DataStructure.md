@@ -8,7 +8,7 @@
 - 642 Moving Average from Data Stream
 - Sliding Window Median (TO DO)
 
-## Deque
+## Deque (Double-ended queue)
 * offerFirst O(1)
 * offerLast O(1)
 * pollFirst O(1)
