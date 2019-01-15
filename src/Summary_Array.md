@@ -16,6 +16,9 @@
 
 * 139 Subarray Sum Closest
 
+* 149 Best Time to Buy and Sell Stock
+
+
 ## Median
 => find kth (還沒排序, quick select)
 
