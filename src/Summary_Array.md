@@ -18,6 +18,12 @@
 
 * 149 Best Time to Buy and Sell Stock
 
+## SubArrays => SubMetrix
+* 405 Submatrix Sum
+https://www.lintcode.com/problem/submatrix-sum/description
+
+* 944 Maximum Submatrix
+
 
 ## Median
 => find kth (還沒排序, quick select)
@@ -62,6 +68,11 @@ Sol 2.) priority queue => O(nlogk)
    => O(nlogk)
   */
 ```
+
+## Best time to buy and sell stock
+* 150 Best Time to Buy and Sell Stock II
+* 1000 Best Time to Buy and Sell Stock with Transaction Fee
+
 
 
 
