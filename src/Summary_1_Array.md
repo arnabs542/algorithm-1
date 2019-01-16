@@ -13,10 +13,9 @@
 // 2，求两个index之间的所有数的和为某数
 // => 開個hashmap<sum, put 預設值(0, -1) and 所有prefix sum
 ```
-
 * 139 Subarray Sum Closest
-
 * 149 Best Time to Buy and Sell Stock
+* 943 Range Sum Query - Immutable
 
 ## SubArrays => SubMetrix
 * 405 Submatrix Sum
