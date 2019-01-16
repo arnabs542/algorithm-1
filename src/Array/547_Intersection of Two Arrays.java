@@ -1,5 +1,5 @@
 /** 
-Sol 1.) HashSet
+Sol 1.) HashSet O(n)
 */
 public class Solution {
    
