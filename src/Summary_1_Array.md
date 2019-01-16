@@ -17,7 +17,7 @@
 * 149 Best Time to Buy and Sell Stock
 * 943 Range Sum Query - Immutable
 
-## SubArrays => SubMetrix
+## SubArrays => SubMetrix (to-do)
 * 405 Submatrix Sum
 https://www.lintcode.com/problem/submatrix-sum/description
 
