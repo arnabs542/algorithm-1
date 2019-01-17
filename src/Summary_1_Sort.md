@@ -145,3 +145,4 @@ public class Solution {
     }
 }
 ```
+* 532 Reverse Pairs
