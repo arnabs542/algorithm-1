@@ -73,3 +73,58 @@ public class Solution {
         
     }
 }
+
+/** Sol 3.) Sort nums1 for binary search O(nlogn) +
+ *          Loop through nums2 and add to HashMap O(mlogn)
+*/
+public class Solution {
+
+    public int[] intersection(int[] nums1, int[] nums2) {
+        if (nums1 == null || nums1.length == 0 ||
+            nums2 == null || nums2.length == 0){
+                return new int[0];
+            }
+        
+        Arrays.sort(nums1);
+        
+        List<Integer> res = new ArrayList<Integer>();
+        Set<Integer> hs = new HashSet<Integer>();
+        for (int i = 0 ; i < nums2.length; i++){
+            if (!hs.contains(nums2[i])){
+                hs.add(nums2[i]);
+                // binary search
+                if (found(nums1, nums2[i])){
+                    res.add(nums2[i]);
+                }
+            }
+        }
+        
+        int[] resultArray = new int[res.size()];
+        for (int i = 0; i < res.size(); i ++){
+            resultArray[i] = res.get(i);
+        }
+        return resultArray;
+    }
+    
+    private boolean found(int[] nums, int target){
+        int start = 0;
+        int end = nums.length -1;
+        
+        while(start + 1 < end){
+            int mid = start + (end - start)/2;
+            if (nums[mid] == target){
+                return true;
+            } else if (nums[mid] > target){
+                end = mid;
+            } else {
+                start = mid;
+            }
+        }
+        
+        if (nums[start] == target || nums[end] == target){
+            return true;
+        }
+        
+        return false;
+    }
+}
