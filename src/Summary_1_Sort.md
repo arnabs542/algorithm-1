@@ -146,5 +146,5 @@ public class Solution {
 }
 ```
 * 532 Reverse Pairs O(nlogn) </br>
-=> 
+=> 先進行切分
 
