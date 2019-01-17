@@ -145,4 +145,6 @@ public class Solution {
     }
 }
 ```
-* 532 Reverse Pairs
+* 532 Reverse Pairs O(nlogn) </br>
+=> 
+
