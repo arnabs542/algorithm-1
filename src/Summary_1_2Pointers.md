@@ -24,8 +24,8 @@ remove b, check c to c <br/>
 remove c, check b to c <br/>
 
 ## Two Sum (相向)
-* requires to sort O(nlogn)<br/>
-* if requires to return index, will need extra space to map back to original index <br/>
+=> requires to sort O(nlogn)<br/>
+=> if requires to return index, will need extra space to map back to original index <br/>
 * 443 Two Sum - Greater than target (相向)  <br/>
     => return count <br/>
 * 533 Two Sum - Closest to target <br/>
