@@ -14,6 +14,7 @@ find target value in sorted array/list
 
 * 617 Maximum Average Subarray II (to-do)
 
+* 460 Find K Closest Elements
 
 
 ## Basic template
