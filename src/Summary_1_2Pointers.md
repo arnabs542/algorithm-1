@@ -1,6 +1,6 @@
 # Two Pointers
 ## Review
-433, 533, 609, 610
+443, 533, 609, 610
 
 ## Duplicate numbers (同向)
 * 521 Remove Duplicate Numbers in Array <br/>
@@ -28,6 +28,7 @@ remove c, check b to c <br/>
 => if requires to return index, will need extra space to map back to original index <br/>
 * 443 Two Sum - Greater than target (相向)  <br/>
     => return count <br/>
+    
 * 533 Two Sum - Closest to target <br/>
 * 587 Two Sum - Unique pairs (相向) <br/>
 * 607 Two Sum III - Data structure design <br/>
