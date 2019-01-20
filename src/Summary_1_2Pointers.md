@@ -2,14 +2,6 @@
 ## Review
 433, 533, 609, 610
 
-## Palindrome (相向)
-* 415 Valid Palindrome <br/>
-* 891 Valid Palindrome II <br/>
-xyzbcczyx <br/>
----x..--- <br/>
-remove b, check c to c <br/>
-remove c, check b to c <br/>
-
 ## Duplicate numbers (同向)
 * 521 Remove Duplicate Numbers in Array <br/>
 
@@ -23,7 +15,15 @@ remove c, check b to c <br/>
 * 228 Middle of Linked List <br/>
 * 102 Linked List Cycle <br/>
 
-## Two Sum
+## Palindrome (相向)
+* 415 Valid Palindrome <br/>
+* 891 Valid Palindrome II <br/>
+xyzbcczyx <br/>
+---x..--- <br/>
+remove b, check c to c <br/>
+remove c, check b to c <br/>
+
+## Two Sum (相向)
 * requires to sort O(nlogn)<br/>
 * if requires to return index, will need extra space to map back to original index <br/>
 * 443 Two Sum - Greater than target (相向)  <br/>
