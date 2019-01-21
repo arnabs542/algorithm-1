@@ -4,6 +4,18 @@
 * top/peek O(1)
 * poll O(logn) 
 * BFS
+
+``` java
+private Comparator<Integer> compareMaxQ = new Comparator<Integer>(){
+        public int compare(Integer a, Integer b){
+            return b - a;
+        }
+    };
+    
+Queue<Integer> minQ = new PriorityQueue<Integer>();
+Queue<Integer> maxQ = new PriorityQueue<Integer>(count, compareMaxQ);
+```
+
 ### Sliding Window
 - 642 Moving Average from Data Stream
 - Sliding Window Median (TO DO)
