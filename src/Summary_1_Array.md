@@ -25,6 +25,7 @@ https://www.lintcode.com/problem/submatrix-sum/description
 
 
 ## Median
+### data not sorted
 => find kth (還沒排序, quick select)
 
 ``` java 
@@ -37,6 +38,8 @@ https://www.lintcode.com/problem/submatrix-sum/description
 * 5 Kth Largest Element
 
 ---
+### data sorted
+
 => find kth (已經排好序, 可以直接嘗試去掉不需要的答案)
 * 65 Median of two Sorted Arrays </br>
 Sol 1.)  O(log(m + n))
@@ -67,6 +70,10 @@ Sol 2.) priority queue => O(nlogk)
    => O(nlogk)
   */
 ```
+
+### from data stream
+* 81 Find Median from Data Stream
+
 
 ## Best time to buy and sell stock
 * 150 Best Time to Buy and Sell Stock II
