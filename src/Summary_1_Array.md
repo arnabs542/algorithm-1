@@ -72,6 +72,7 @@ Sol 2.) priority queue => O(nlogk)
 ```
 
 ### from data stream
+=> maintain priority queue
 * 81 Find Median from Data Stream
 
 
