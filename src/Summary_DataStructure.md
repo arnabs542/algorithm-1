@@ -1,8 +1,8 @@
 # Data Structure
 ## Queue
-* offer O(1)
-* top O(1)
-* poll O(1)
+* offer O(logn)
+* top/peek O(1)
+* poll O(logn) 
 * BFS
 ### Sliding Window
 - 642 Moving Average from Data Stream
