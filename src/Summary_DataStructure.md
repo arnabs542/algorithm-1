@@ -16,9 +16,26 @@ Queue<Integer> minQ = new PriorityQueue<Integer>();
 Queue<Integer> maxQ = new PriorityQueue<Integer>(count, compareMaxQ);
 ```
 
-### Sliding Window
-- 642 Moving Average from Data Stream
-- Sliding Window Median (TO DO)
+K个数的中位数，需要知道第K/2小和第K/2大
+=> 最大堆+最小堆
+• 动态维护中位数一般都是用双堆解决 O(nlogn)
+– 同理：动态维护第K大数
+
+* 642 Moving Average from Data Stream
+
+* 360 Sliding Window Median
+=> (minHeap.remove(nums[j]) takes O(n), 太慢了。 </br>
+=> TreeSet
+
+## TreeSet
+* .add() O(logn)
+* .remove() O(logn)
+* .contains() O(logn)
+* .first() O(1) // smallest
+* .last() O(1)
+
+* 360 Sliding Window Median
+
 
 ## Deque (Double-ended queue)
 * offerFirst O(1)
