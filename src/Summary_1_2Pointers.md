@@ -1,6 +1,9 @@
 # Two Pointers
 ## Review
-443, 533, 609, 610
+508, 443, 533, 609, 610
+
+## swap 
+* 508 Wiggle Sort
 
 ## Duplicate numbers (同向)
 * 521 Remove Duplicate Numbers in Array <br/>
