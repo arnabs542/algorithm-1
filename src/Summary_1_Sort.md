@@ -24,6 +24,9 @@ if (A[end] == target){
 }
 ```
 
+## swap 
+* 508 Wiggle Sort
+
 ## Quick Sort
 *O(NlogN), 最壞O(N^2) </br>
 
