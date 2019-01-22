@@ -41,7 +41,8 @@ public class Solution {
                 index ++;
             } else {
                 temp[index] = A[rightStart];
-                count = count + mid - leftStart + 1;
+                /*** (mid + 1 - leftStart); not (rightStart - leftStart) ***/
+                count = count + mid + 1 - leftStart;
                 rightStart ++;
                 index ++;
             }
