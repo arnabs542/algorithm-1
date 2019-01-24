@@ -10,10 +10,10 @@ class Element{
 public class Solution {
     // Duplicates not accept in TreeSet
     // since there are duplicate in the question, so we can't directly use TreeSet<Integer>
-    // 比較時要加上 val 相等時的判斷, 不然val相等, 不會被加入TreeSet
     TreeSet<Element> maxQ; 
     TreeSet<Element> minQ;
     
+    // 比較時要加上 val 相等時的判斷, 不然val相等, 不會被加入TreeSet
     private Comparator<Element> compareMaxQ = new Comparator<Element>(){
         public int compare(Element a, Element b){
             if (b.val == a.val) {
