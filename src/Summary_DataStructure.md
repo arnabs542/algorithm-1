@@ -62,9 +62,12 @@ K个数的中位数，需要知道第K/2小和第K/2大
 ### Monotone Stack
 - 单调栈专门解决找一个值左/右第一个比它大/小的值 </br>
 - 线性时间复杂度 </br>
-* 122 Largest Rectangle in Histogram
 
-* 510 Maximal Rectangle
+* 122 Largest Rectangle in Histogram </br>
+=> 建立遞增的stack
+
+* 510 Maximal Rectangle </br>
+=> 變成2D的122 
 
 * 126 Max Tree (To-Do)
 
