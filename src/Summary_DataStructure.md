@@ -58,6 +58,8 @@ K个数的中位数，需要知道第K/2小和第K/2大
 ### Monotone Stack
 * 122 Largest Rectangle in Histogram
 
+* 510. Maximal Rectangle
+
 ## Trie
 O(L) // L: word length
 ``` java
