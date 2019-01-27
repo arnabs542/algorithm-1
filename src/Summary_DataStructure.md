@@ -1,5 +1,9 @@
 # Data Structure
 ## Queue
+– 解决动态求最大/小值
+– 可以解决动态第K大/小问题
+– 双堆可以解决动态中位数
+
 * offer O(logn)
 * top/peek O(1)
 * poll O(logn) 
@@ -56,9 +60,14 @@ K个数的中位数，需要知道第K/2小和第K/2大
 * iterative DFS
 
 ### Monotone Stack
+• 单调栈专门解决找一个值左/右第一个比它大/小的值
+• 线性时间复杂度
 * 122 Largest Rectangle in Histogram
 
-* 510. Maximal Rectangle
+* 510 Maximal Rectangle
+
+* 126 Max Tree (To-Do)
+
 
 ## Trie
 O(L) // L: word length
