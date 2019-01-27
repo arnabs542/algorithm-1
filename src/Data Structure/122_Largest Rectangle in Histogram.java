@@ -1,3 +1,5 @@
+// O(n)
+
 public class Solution {
     /**
      * @param height: A list of integer
