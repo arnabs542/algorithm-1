@@ -54,7 +54,9 @@ K个数的中位数，需要知道第K/2小和第K/2大
 * top O(1)
 * pop O(1)
 * iterative DFS
+
 ### Monotone Stack
+* 122 Largest Rectangle in Histogram
 
 ## Trie
 O(L) // L: word length
