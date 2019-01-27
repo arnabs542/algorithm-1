@@ -1,8 +1,8 @@
 # Data Structure
 ## Queue
-– 解决动态求最大/小值 </br>
-– 可以解决动态第K大/小问题 </br>
-– 双堆可以解决动态中位数 </br>
+– 解决動態求最大/小值 </br>
+– 可以解决動態第K大/小问题 </br>
+– 双堆可以解决動態中位数 </br>
 
 * offer O(logn)
 * top/peek O(1)
@@ -19,10 +19,10 @@ private Comparator<Integer> compareMaxQ = new Comparator<Integer>(){
 Queue<Integer> minQ = new PriorityQueue<Integer>();
 Queue<Integer> maxQ = new PriorityQueue<Integer>(count, compareMaxQ);
 ```
-
-K个数的中位数，需要知道第K/2小和第K/2大
-=> 最大堆+最小堆
-• 动态维护中位数一般都是用双堆解决 O(nlogn)
+* 81 Find Median from Data Stream </br>
+K个数的中位数，需要知道第K/2小和第K/2大 </br>
+=> 最大堆+最小堆 </br>
+动态维护中位数一般都是用双堆解决 O(nlogn) </br>
 – 同理：动态维护第K大数
 
 * 642 Moving Average from Data Stream
