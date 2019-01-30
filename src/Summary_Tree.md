@@ -7,8 +7,13 @@
 根左右</br>
 66. Binary Tree Preorder Traversal
 
-## In Order
+## In Order 
 左根右</br>
+``` java
+/* O(n) = T(n/2) + T(n/2)
+        = T(n/4) + T(n/4) + T(n/4) + T(n/4)
+        = T(n/8) + T(n/8) + .... + T(n/8)
+```
 67. Binary Tree Inorder Traversal
 
 ## Post Order
