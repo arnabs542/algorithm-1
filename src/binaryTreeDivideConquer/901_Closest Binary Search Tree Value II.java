@@ -25,13 +25,12 @@ public class Solution {
         
         int l = 0;
         int r = treeList.size() - 1;
-        // 此處不能用二分法,因為target可能大於最大的數
         while(l + 1 < r){
             int mid = (l + r) / 2;
             if (treeList.get(mid) > target){
-                l = mid;
-            } else {
                 r = mid;
+            } else {
+                l = mid;
             }
         }
         
