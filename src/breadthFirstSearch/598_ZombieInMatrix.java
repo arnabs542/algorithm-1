@@ -4,8 +4,9 @@ import java.util.LinkedList;
 import java.util.Queue;
 
 /**
- * Created by epingho on 2017/7/5.
+ * *** get People Count;
  */
+
 public class ZombieInMatrix {
 
     public int PEOPLE = 0;
