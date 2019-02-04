@@ -5,9 +5,12 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.Queue;
 
-/**
- * Created by epingho on 2017/7/5.
- */
+  /* BFS 每個房子, 找這個房子到每個空地的距離, 
+     並記錄1. 每個空地被visit過幾次, 2.每個空地到個房子距離的總和
+   * for loop 每個空地, 空地被visit過的次數 != 房子的個數 => 跳過 
+     (表示不是每個房子都能到達這個空地)
+     空地被visit過的次數 == 房子的個數 => 打擂台找最短的
+   */
 
 class Coordinate {
     int x, y;
