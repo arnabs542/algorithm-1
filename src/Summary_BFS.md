@@ -35,6 +35,8 @@ while(!q.isEmpty()){
 242. Convert Binary Tree to Linked Lists by Depth
 
 ## BFS on graph
+==> 沒有圖的先制造出圖, </br>
+==> 使用HashMap or HashSet 以免重複計算 </br>
 ==> 圖可能會有環, 一個節點的鄰居的鄰居可能是自己, 所以要記錄去過的點 </br>
 1. use HashSet/HashMap/arraylist to save visited node </br>
 2. or if node = 1 mark visited node = 0, then we will not consider it again
