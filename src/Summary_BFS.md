@@ -57,9 +57,9 @@ while(!q.isEmpty()){
 }
 
 ```
-120. Word Ladder </br>
-433. Number of Islands </br>
-611. Knight Shortest Path </br>
+* 120 Word Ladder 
+* 433 Number of Islands 
+* 611. Knight Shortest Path 
 => 可以試試看用從source, destination同時出發開始走, 看看是不否交會？
 
 
@@ -111,13 +111,13 @@ Topoligical Order的四種問法
 * 求所有的拓扑序 DFS
 * 求是否存在且仅存在一个拓扑序 => Queue中最多同时只有1个节点
 
-127. Topological Sorting </br>
-892. Alien Dictionary </br>
-615. Course Schedule </br>
+* 127 Topological Sorting </br>
+* 892 Alien Dictionary </br>
+* 615 Course Schedule </br>
 
 Todo:</br>
-616. Course Schedule II </br>
-605. Sequence Reconstruction
+* 616 Course Schedule II 
+* 605 Sequence Reconstruction
 
 
 
