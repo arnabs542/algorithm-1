@@ -61,7 +61,8 @@ public void DFS(List<String> result,
 => candidates有重複, 有幾個重複才能用幾個 </br>
 
 /////
-* 90 k Sum II  </br>
+* 89 k Sum  (DP)
+* 90 k Sum II 
 * 136 Palindrome Partitioning </br>
 => 加入記憶化搜索 </br>
 
