@@ -63,10 +63,9 @@ public void DFS(List<String> result,
 /////
 * 89 k Sum  (DP)
 * 90 k Sum II 
-* 136 Palindrome Partitioning </br>
-=> 加入記憶化搜索 </br>
 
-To do:
+=> 加入記憶化搜索
+* 136 Palindrome Partitioning </br>
 192. Wildcard Matching
 
 
