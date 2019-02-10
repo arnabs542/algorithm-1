@@ -23,6 +23,9 @@ https://www.lintcode.com/problem/submatrix-sum/description
 
 * 944 Maximum Submatrix
 
+## Best time to buy and sell stock
+* 150 Best Time to Buy and Sell Stock II
+* 1000 Best Time to Buy and Sell Stock with Transaction Fee
 
 ## Median
 ### data not sorted
@@ -36,6 +39,7 @@ https://www.lintcode.com/problem/submatrix-sum/description
 * 461 Kth Smallest Numbers in Unsorted Array 
 * 606 Kth Largest Element II  
 * 5 Kth Largest Element
+* 80 Median
 
 ---
 ### data sorted
@@ -74,13 +78,4 @@ Sol 2.) priority queue => O(nlogk)
 ### from data stream
 => maintain priority queue
 * 81 Find Median from Data Stream
-
-
-## Best time to buy and sell stock
-* 150 Best Time to Buy and Sell Stock II
-* 1000 Best Time to Buy and Sell Stock with Transaction Fee
-
-
-
-
 
