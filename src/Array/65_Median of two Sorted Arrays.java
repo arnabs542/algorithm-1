@@ -9,15 +9,15 @@ public class Solution {
     public double findMedianSortedArrays(int[] A, int[] B) {
         int n = A.length + B.length;
         if (n % 2 == 0){
-            return (findKth(A, 0, B, 0, n/2) + findKth(A, 0, B, 0, n/2 + 1))/2.0;
+            return (findKthSmallest(A, 0, B, 0, n/2) + findKthSmallest(A, 0, B, 0, n/2 + 1))/2.0;
         }
         
-         return findKth(A, 0, B, 0, n/2 + 1);
+         return findKthSmallest(A, 0, B, 0, n/2 + 1);
 
     }
     
     // 找第k個數, k start from 1, 2, 3 ... 
-    private double findKth(int[] A, int AStartIndex, int[] B, int BStartIndex, int k){
+    private double findKthSmallest(int[] A, int AStartIndex, int[] B, int BStartIndex, int k){
         if (AStartIndex > A.length -1){
             return B[BStartIndex + k -1];
         }
@@ -38,10 +38,10 @@ public class Solution {
         
         // 比大小, 從小的那個array裡面一次拿掉k/2個數
         if(midA > midB) {
-            return findKth(A, AStartIndex, B, BStartIndex + mid, k - mid); 
+            return findKthSmallest(A, AStartIndex, B, BStartIndex + mid, k - mid); 
         } 
         
-        return findKth(A, AStartIndex + mid, B, BStartIndex, k - mid);
+        return findKthSmallest(A, AStartIndex + mid, B, BStartIndex, k - mid);
         
     }
 }
