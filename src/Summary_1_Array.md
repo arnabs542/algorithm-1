@@ -56,6 +56,7 @@ Sol 1.)  O(log(m + n))
 Sol 2.) 2分答案 O(log(range) * (log(m) + log(n))) </br>
 
 * 931 Median of K Sorted Arrays 
+=> 注意最後return double ((double)med1 + (double)med2) / 2
 
 Sol 1.) 2分答案 => O(log(range) * klogn)
 ```java
