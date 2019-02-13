@@ -35,6 +35,7 @@ https://www.lintcode.com/problem/submatrix-sum/description
 // Quick Select
 // T(n) = O(n) + O(n/2) + O(n/4) + O(n/8) .....
 //     ~= O(n)
+// 用O(n/2) O(n/4) O(n/8) .... 的時間進行交換
 ```
 * 461 Kth Smallest Numbers in Unsorted Array 
 * 606 Kth Largest Element II  
@@ -48,10 +49,15 @@ https://www.lintcode.com/problem/submatrix-sum/description
 * 65 Median of two Sorted Arrays </br>
 Sol 1.)  O(log(m + n))
 ``` java
-   要找第k大的數
+   要找從小到大, 第k小的數
    兩個array 各自去找前k/2大的數;
    找到後比大小, 把小的前k/2個數丟掉
    繼續找 k - k/2個數
+   直到
+   => 如果array A 已經沒有數, 直接從array B 取第k個
+   => 如果array B 已經沒有數, 直接從array A 取第k個
+   => 如果只要取一個, 取比較小的那個
+   只要O(1)的時間, 數據規模變成log(m + n)
 ```
 Sol 2.) 2分答案 O(log(range) * (log(m) + log(n))) </br>
 
