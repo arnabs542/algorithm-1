@@ -1,6 +1,6 @@
 # Binary Tree
 ## Review
-* #93, #900, #901
+* #93, # 95, #900, #901
 
 ## Level Order(BFS)
 ## Pre Order 
