@@ -1,6 +1,6 @@
 # Binary Tree
 ## Review
-* #93, #95, #88 #900, #901
+* #93, #95, #88 #900, #901, #246
 
 ## Traverse
 ### Level Order(BFS)
@@ -35,7 +35,7 @@
 
 ===> path Sum
 * 376 Binary Tree Path Sum
-** 246 Binary Tree Path Sum II
+* 246 Binary Tree Path Sum II
 
 ===> 改變結構
 * 453 Flatten Binary Tree to Linked List </br>
