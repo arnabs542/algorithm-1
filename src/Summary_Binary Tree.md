@@ -1,6 +1,6 @@
 # Binary Tree
 ## Review
-* #93, # 95, #900, #901
+* #93, #95, #88 #900, #901
 
 ## Level Order(BFS)
 ## Pre Order 
@@ -38,7 +38,7 @@
 => left subtree contains only nodes smaller than root's key </br>
 => right subtree contains only nodes greater than root's key </br>
 => left subtree and right subtree are also binary search tree </br>
-=> inorder, preporder
+=> 利用特性取值
 
 * 95 Validate Binary Search Tree
  => recursion 傳入 lowerbound and upperbound
@@ -50,6 +50,7 @@
  => O(h+k)
 
 * 915 Inorder Predecessor in BST
+* 448 Inorder Successor in BST
 
 * 701 Trim a Binary Search Tree
 => 判斷root是否在區間內,
@@ -59,7 +60,7 @@
 => trim right => root = 遞歸root.left
 
 // DFS
-// 480. Binary Tree Paths
-// BinaryTreePathSum
+＊ 480 Binary Tree Paths
+*  BinaryTreePathSum
 
-
+## Balanced Binary Search Tree
