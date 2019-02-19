@@ -1,14 +1,4 @@
-/**
- * Definition for a binary tree node.
- * public class TreeNode {
- *     int val;
- *     TreeNode left;
- *     TreeNode right;
- *     TreeNode(int x) { val = x; }
- * }
- */
-
-
+// Sol 1.) 考慮BST特性 ... iteration O(h)
 public class Solution {
     /*
      * @param root: The root of the BST.
@@ -29,5 +19,37 @@ public class Solution {
         }
         
         return succ;
+    }
+}
+
+
+// Sol 2.) 考慮BST特性 ... recursion O(h)
+
+public class Solution {
+    /*
+     * @param root: The root of the BST.
+     * @param p: You need find the successor node of p.
+     * @return: Successor of p.
+     */
+    // Left, Root, Right
+
+    TreeNode succ = null;
+    public TreeNode inorderSuccessor(TreeNode root, TreeNode p) {
+        helper(root, p);
+        
+        return succ;
+    }
+    
+    private void helper(TreeNode root, TreeNode p){
+        if (root == null){
+            return;
+        }
+        
+        if (root.val > p.val){
+            succ = root;
+            helper(root.left, p);
+        } else {
+            helper(root.right, p);
+        }
     }
 }
