@@ -30,12 +30,12 @@
  => only (LCA == null) 才算是答案
 * 474 Lowest Common Ancestor II (todo)
 
-* => path
+===> path
 * 480 Binary Tree Paths
 
-* => 改變結構
+===> 改變結構
 * 453 Flatten Binary Tree to Linked List </br>
- => 紀錄最後一個點, 才能把right的部分接進來
+=> 紀錄最後一個點, 才能把right的部分接進來
 
 
 ## Binary Search Tree
