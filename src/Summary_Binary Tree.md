@@ -33,6 +33,10 @@
 ===> path
 * 480 Binary Tree Paths
 
+===> path Sum
+* 376 Binary Tree Path Sum
+** 246 Binary Tree Path Sum II
+
 ===> 改變結構
 * 453 Flatten Binary Tree to Linked List </br>
 => 紀錄最後一個點, 才能把right的部分接進來
@@ -65,5 +69,3 @@
 
 // DFS
 *  BinaryTreePathSum
-
-## Balanced Binary Search Tree
