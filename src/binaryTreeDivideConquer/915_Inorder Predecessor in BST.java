@@ -1,14 +1,4 @@
-/**
- * Definition of TreeNode:
- * public class TreeNode {
- *     public int val;
- *     public TreeNode left, right;
- *     public TreeNode(int val) {
- *         this.val = val;
- *         this.left = this.right = null;
- *     }
- * }
- */
+// Sol 1.) 考慮BST特性... iteration O(h)
 
 public class Solution {
     /**
@@ -16,47 +6,54 @@ public class Solution {
      * @param p: the given node
      * @return: the in-order predecessor of the given node in the BST
      */
-    private TreeNode pre = null;
+    // Left, Root, Right
     public TreeNode inorderPredecessor(TreeNode root, TreeNode p) {
-        dfs(root, p);
-        return pre;
-    }
-    
-    private void dfs(TreeNode root, TreeNode p){
-        if (root == null){
-            return;
-        }
+        TreeNode pred = null;
         
-        dfs(root.left, p);
-        if (root == p){
-            if (root.left != null){
-                pre = root.left;
+        while(root != null){
+            if (root.val >= p.val){
+                root = root.left;
+            } else {
+                pred = root;
+                root = root.right;
             }
-            return;
         }
         
-        if (root.val < p.val){
-            pre = root;
-            dfs(root.right, p);
-        }
+        return pred;
         
     }
 }
 
+// Sol 2.) 考慮BST特性... recursion O(h)
 
-// Sol 2.) 沒有考慮BST特性... 直接in-oder
-/**
- * Definition of TreeNode:
- * public class TreeNode {
- *     public int val;
- *     public TreeNode left, right;
- *     public TreeNode(int val) {
- *         this.val = val;
- *         this.left = this.right = null;
- *     }
- * }
- */
+public class Solution {
+    /**
+     * @param root: the given BST
+     * @param p: the given node
+     * @return: the in-order predecessor of the given node in the BST
+     */
+    // Left, Root, Right
+    TreeNode pred = null;
+    public TreeNode inorderPredecessor(TreeNode root, TreeNode p) {
+        helper(root, p);
+        return pred;
+    }
+    
+    private void helper(TreeNode root, TreeNode p){
+        if (root == null){
+            return;
+        }
+        
+        if (root.val >= p.val){
+            helper(root.left, p);
+        } else {
+            pred = root;
+            helper(root.right, p);
+        }
+    }
+}
 
+// Sol 3.) 沒有考慮BST特性... 直接in-oder
 public class Solution {
     /**
      * @param root: the given BST
