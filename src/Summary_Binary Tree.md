@@ -2,38 +2,42 @@
 ## Review
 * #93, #95, #88 #900, #901
 
-## Level Order(BFS)
-## Pre Order 
-根左右</br>
-66. Binary Tree Preorder Traversal
+## Traverse
+### Level Order(BFS)
+### Pre Order 
+* 根左右
+* 66 Binary Tree Preorder Traversal
+### In Order 
+* 左根右
+* 67 Binary Tree Inorder Traversal
+### Post Order
+* 左右根
+* 68 Binary Tree PostOrder Traversal
 
-## In Order 
-左根右</br>
-``` java
-/* O(n) = T(n/2) + T(n/2)
-        = T(n/4) + T(n/4) + T(n/4) + T(n/4)
-        = T(n/8) + T(n/8) + .... + T(n/8)
-```
-67. Binary Tree Inorder Traversal
-
-## Post Order
-左右根</br>
-68. Binary Tree PostOrder Traversal
-
-## Depth
+## 求(depth, sum, path, lowest common anccestor)
 * 97 Maximum Depth of Binary Tree 
 * 155 Minimum Depth of Binary Tree 
 * 93 Balanced Binary Tree 
  => 求深度
-* 596 Minimum Subtree
-* 453 Flatten Binary Tree to Linked List </br>
- => 紀錄最後一個點, 才能把right的部分接進來
+* 596 Minimum Subtree 
+
+* => LCA
+* 88 Lowest Common Ancestor of a Binary Tree
 * 578 Lowest Common Ancestor III </br>
  => 左右都存在為LCA </br>
  => 回傳result 以判斷 </br>
  => 因為要找Lowest common ancestor (A, B的第一個共同祖先) </br>
  => only (LCA == null) 才算是答案
- 
+* 474 Lowest Common Ancestor II (todo)
+
+* => path
+* 480 Binary Tree Paths
+
+* => 改變結構
+* 453 Flatten Binary Tree to Linked List </br>
+ => 紀錄最後一個點, 才能把right的部分接進來
+
+
 ## Binary Search Tree
 => left subtree contains only nodes smaller than root's key </br>
 => right subtree contains only nodes greater than root's key </br>
@@ -60,7 +64,6 @@
 => trim right => root = 遞歸root.left
 
 // DFS
-＊ 480 Binary Tree Paths
 *  BinaryTreePathSum
 
 ## Balanced Binary Search Tree
