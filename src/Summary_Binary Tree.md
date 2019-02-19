@@ -15,13 +15,13 @@
 * 68 Binary Tree PostOrder Traversal
 
 ## 求(depth, sum, path, lowest common anccestor)
+===> 深度
+* 596 Minimum Subtree 
 * 97 Maximum Depth of Binary Tree 
 * 155 Minimum Depth of Binary Tree 
 * 93 Balanced Binary Tree 
- => 求深度
-* 596 Minimum Subtree 
 
-* => LCA
+===> LCA
 * 88 Lowest Common Ancestor of a Binary Tree
 * 578 Lowest Common Ancestor III </br>
  => 左右都存在為LCA </br>
