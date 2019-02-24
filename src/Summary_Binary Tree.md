@@ -1,6 +1,6 @@
 # Binary Tree
 ## Review
-* #93, #95, #88 #900, #901, #246
+* #93, #95, #88 #900, #901, #246, #902
 
 ## Traverse
 ### Level Order(BFS)
@@ -36,6 +36,8 @@
 ===> path Sum
 * 376 Binary Tree Path Sum
 * 246 Binary Tree Path Sum II
+* 472 Binary Tree Path Sum III (skip)
+* 863 Binary Tree Path Sum IV (skip)
 
 ===> 改變結構
 * 453 Flatten Binary Tree to Linked List </br>
@@ -48,14 +50,15 @@
 => left subtree and right subtree are also binary search tree </br>
 => 利用特性取值
 
+* 902 Kth Smallest Element in a BST
+ => inorder traverse 先找到最小的 O(h) 
+ => 計算經過的k 的個樹, 找到第k小的 O(k)
+ => O(h+k)
+ 
 * 95 Validate Binary Search Tree
  => recursion 傳入 lowerbound and upperbound
  
 * 900 Closest Binary Search Tree Value
-* 902 Kth Smallest Element in a BST
- => inorder traverse 先找到最小的 O(h) 樹高
- => 計算經過的k 的個樹, 找到第k小的 O(k)
- => O(h+k)
 
 * 915 Inorder Predecessor in BST
 * 448 Inorder Successor in BST
@@ -67,5 +70,3 @@
 => trim left => root = 遞歸root.right
 => trim right => root = 遞歸root.left
 
-// DFS
-*  BinaryTreePathSum
