@@ -63,10 +63,10 @@
 * 915 Inorder Predecessor in BST
 * 448 Inorder Successor in BST
 
-* 701 Trim a Binary Search Tree
-=> 判斷root是否在區間內,
-=> 在區間內, root.left, root.right各自下去
-=> 不再區間內, 判斷要trim left or right
-=> trim left => root = 遞歸root.right
-=> trim right => root = 遞歸root.left
+* 701 Trim a Binary Search Tree </br>
+=> 判斷root是否在區間內, </br>
+=> 在區間內, root.left, root.right各自下去 </br>
+=> 不再區間內, 判斷要trim left or right </br>
+=> trim left => root = 遞歸root.right </br>
+=> trim right => root = 遞歸root.left </br>
 
