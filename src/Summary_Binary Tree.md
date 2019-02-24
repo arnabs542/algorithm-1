@@ -50,10 +50,14 @@
 => left subtree and right subtree are also binary search tree </br>
 => 利用特性取值
 
-* 902 Kth Smallest Element in a BST
- => inorder traverse 先找到最小的 O(h) 
- => 計算經過的k 的個樹, 找到第k小的 O(k)
- => O(h+k)
+* 902 Kth Smallest Element in a BST</br>
+ => inorder traverse 先找到最小的 O(n) </br>
+ => 計算經過的k 的個樹, 找到第k小的 O(k)</br>
+ => O(n + k)</br>
+ 
+ => To-Do: O(h + k)</br>
+ 
+ 
  
 * 95 Validate Binary Search Tree
  => recursion 傳入 lowerbound and upperbound
@@ -69,4 +73,6 @@
 => 不再區間內, 判斷要trim left or right </br>
 => trim left => root = 遞歸root.right </br>
 => trim right => root = 遞歸root.left </br>
+
+* 11 Search Range in Binary Search Tree
 
