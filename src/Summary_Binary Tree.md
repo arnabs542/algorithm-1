@@ -53,8 +53,7 @@
 * 902 Kth Smallest Element in a BST</br>
  => inorder traverse 先找到最小的 O(n) </br>
  => 計算經過的k 的個樹, 找到第k小的 O(k)</br>
- => O(n + k)</br>
- 
+ => O(n + k) </br>
  => To-Do: O(h + k)</br>
  
  
