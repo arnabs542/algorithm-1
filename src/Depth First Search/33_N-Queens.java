@@ -71,6 +71,10 @@ public class Solution {
             if (nextCol - nextRow == col - row){
                 return false;
             }
+            
+            //if (Math.abs(newRow - row) == Math.abs(newCol - col)){
+            //    return false;
+            //}
         }
         
         return true;
