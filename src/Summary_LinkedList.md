@@ -2,6 +2,7 @@
 #450 #134
 
 ### create O(1)
+### search O(n)
 ### delete (search O(n) + delete O(1))
 // 改變linked list結構, use dummy head
 
