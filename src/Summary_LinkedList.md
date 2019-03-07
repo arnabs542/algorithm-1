@@ -13,12 +13,14 @@
 * 452 Remove Linked List Elements
 
 ### traverse
-* 380 Intersection of Two Linked Lists
 * 105 Copy List with Random Pointer
 * 173 Insertion Sort List
-* 103 Linked List Cycle II
 * 223 Palindrome Linked List
 
+### 有環
+* 380 Intersection of Two Linked Lists
+* 102 Linked List Cycle
+* 103 Linked List Cycle II
 
 ### reverse/ rotate/ reverse
 * 35 Reverse Linked List 
