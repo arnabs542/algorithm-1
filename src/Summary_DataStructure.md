@@ -79,6 +79,9 @@ O(L) // L: word length
 * 422 Implement Trie
 * 473 Add and Search Word - Data structure design
 
+* 1090 Map Sum Pairs (Trie + HashMap)
+
+
 ## Hash
 * 128 Hash Function
 * 134 LRU Cache
