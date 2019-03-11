@@ -1,5 +1,5 @@
 ## review
-#450 #134 #380
+#450 #134 #380 #103
 
 ### create O(1)
 ### search O(n)
@@ -20,7 +20,7 @@
 ### 有環
 * 380 Intersection of Two Linked Lists
 * 102 Linked List Cycle
-* 103 Linked List Cycle II
+* 103 Linked List Cycle II (找到進入口)
 
 ### reverse/ rotate/ reverse
 * 35 Reverse Linked List 
