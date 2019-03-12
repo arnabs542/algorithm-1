@@ -66,6 +66,19 @@ while(!q.isEmpty()){
 * 611. Knight Shortest Path 
 => 可以試試看用從source, destination同時出發開始走, 看看是不否交會？
 
+* Time on Metrix: O(R X C)
+```
+// R*C个点，R*C*2 条边（每个点上下左右4条边，每条边被2个点共享）
+```
+
+* Time on Graph: O(N^2)
+```
+/* 
+Node: N;
+Edge: M; (max M could be N^2 )
+=> time complexity is O(N + M) => worst case could be O(N^2)
+*/
+```
 
 ## Topological sorting
 ``` java
