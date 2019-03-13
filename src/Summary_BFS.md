@@ -136,6 +136,8 @@ Todo:</br>
 * 616 Course Schedule II 
 * 605 Sequence Reconstruction
 
+## Union find
+* 589 Connecting Graph
 
 
 
