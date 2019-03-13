@@ -1,28 +1,44 @@
 public class ConnectingGraph {
-    private int[] mapToFather = null;
-    
+    /*
+    * @param n: An integer
+    */
+    private int[] father;
     public ConnectingGraph(int n) {
-        mapToFather = new int[n];
-        for (int i = 0; i < n; i ++){
-            mapToFather[i] = i;
+        father = new int[n + 1];
+        for (int i = 1; i < n; i ++){
+            father[i] = i;
         }
     }
 
+    /*
+     * @param a: An integer
+     * @param b: An integer
+     * @return: nothing
+     */
     public void connect(int a, int b) {
-        int fatherA = mapToFather[a - 1];
-        int fatherB = mapToFather[b - 1];
-        
-        mapToFather[a - 1] = fatherB;
-        for (int i = 0; i < mapToFather.length; i ++){
-            if (mapToFather[i] == fatherA){
-                mapToFather[i] = fatherB;
+        int root_a = father[a];
+        int root_b = father[b];
+        if (root_a != root_b){
+            for (int i = 1; i < father.length; i ++){
+                if(father[i] == root_a){
+                    father[i] = root_b;
+                }
             }
         }
     }
 
+    /*
+     * @param a: An integer
+     * @param b: An integer
+     * @return: A boolean
+     */
     public boolean query(int a, int b) {
-        int fatherA = mapToFather[a - 1];
-        int fatherB = mapToFather[b - 1];
-        return fatherA == fatherB;
+        int root_a = father[a];
+        int root_b = father[b];
+        if (root_a == root_b){
+            return true;
+        }
+        
+        return false;
     }
 }
