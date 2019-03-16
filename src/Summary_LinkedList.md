@@ -27,6 +27,8 @@
 * 36 Reverse Linked List II
 * 450 Reverse Nodes in k-Group
 * 451 Swap Nodes in Pairs
+* 511 Swap Two Nodes in Linked List
+
 * 99 Reorder List
 * 96 Partition List
 
