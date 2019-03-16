@@ -29,6 +29,7 @@
 * 451 Swap Nodes in Pairs
 * 511 Swap Two Nodes in Linked List
 
+//開兩個LinkedList, 最後再連起來
 * 99 Reorder List
 * 96 Partition List
 
