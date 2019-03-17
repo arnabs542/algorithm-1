@@ -46,6 +46,8 @@
 * 98 Sort List
 
 * 106 Convert Sorted List to Binary Search Tree
+* 378 Convert Binary Search Tree to Doubly Linked List
+
 * 242 Convert Binary Tree to Linked Lists by Depth
 
 * 165 Merge Two Sorted Lists
