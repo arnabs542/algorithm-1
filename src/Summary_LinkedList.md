@@ -3,6 +3,8 @@
 
 ### create O(1)
 ### search O(n)
+* 228 Middle of Linked List
+
 ### delete (search O(n) + delete O(1))
 // 改變linked list結構, use dummy head
 
