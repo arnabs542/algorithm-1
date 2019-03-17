@@ -1,3 +1,5 @@
+// O(coins.length * amount)
+// O(m種類 * 
 public class Solution {
     /**
      * @param coins: a list of integer
