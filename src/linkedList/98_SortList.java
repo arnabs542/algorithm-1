@@ -1,41 +1,46 @@
+//* 1.) merge sort
+
 /**
- * Definition for ListNode.
+ * Definition for ListNode
  * public class ListNode {
  *     int val;
  *     ListNode next;
- *     ListNode(int val) {
- *         this.val = val;
- *         this.next = null;
+ *     ListNode(int x) {
+ *         val = x;
+ *         next = null;
  *     }
  * }
- */ 
+ */
+
 public class Solution {
     /**
      * @param head: The head of linked list.
-     * @return: You should return the head of the sorted linked list,
-                    using constant space complexity.
+     * @return: You should return the head of the sorted linked list, using constant space complexity.
      */
-    public ListNode sortList(ListNode head) {  
-        // **
+    // merge sort  
+    public ListNode sortList(ListNode head) {
         if (head == null || head.next == null){
             return head;
         }
-        
+        // 1. find middle
         ListNode middle = findMiddle(head);
+        
+        // sort right
         ListNode right = sortList(middle.next);
-        middle.next = null; 
+        middle.next = null;
+        // sort left
         ListNode left = sortList(head);
+        
+        // merge
         return merge(left, right);
     }
     
     private ListNode findMiddle(ListNode head){
-        ListNode slow = head;
         ListNode fast = head.next;
-        
-        // **
+        ListNode slow = head;
         while (fast != null && fast.next != null){
-            slow = slow.next;
             fast = fast.next.next;
+            slow = slow.next;
         }
         
         return slow;
@@ -43,25 +48,31 @@ public class Solution {
     
     private ListNode merge(ListNode left, ListNode right){
         ListNode dummy = new ListNode(0);
-        ListNode tail = dummy;
-        
-        while (left != null && right != null){
-            if (left.val < right.val){
-                tail.next = left;
-                left = left.next;
-            }else{
-                tail.next = right;
-                right = right.next;
+        ListNode curr = dummy;
+        ListNode l = left;
+        ListNode r = right;
+        while (l != null && r != null){
+            if (l.val < r.val){
+                curr.next = l;
+                curr = curr.next;
+                l = l.next;
+            } else {
+                curr.next = r;
+                curr = curr.next;
+                r = r.next;
             }
-            tail = tail.next;
         }
         
-        if (left != null){
-            tail.next = left;
+        if (l != null){
+            curr.next = l;
+            curr = curr.next;
+            l = l.next;
         }
         
-        if (right != null){
-            tail.next = right;
+        if (r != null){
+            curr.next = r;
+            curr = curr.next;
+            r = r.next;
         }
         
         return dummy.next;
