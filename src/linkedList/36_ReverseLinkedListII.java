@@ -1,4 +1,3 @@
-
 /**
  * Definition for ListNode
  * public class ListNode {
@@ -10,44 +9,50 @@
  *     }
  * }
  */
+
 public class Solution {
     /**
-     * @param ListNode head is the head of the linked list 
-     * @oaram m and n
+     * @param head: ListNode head is the head of the linked list 
+     * @param m: An integer
+     * @param n: An integer
      * @return: The head of the reversed ListNode
      */
-    public ListNode reverseBetween(ListNode head, int m , int n) {
-        if (n <= m || head == null){
-            return head;
-        }
-        
-        // add dummy node to handle special case when m = 1
+    public ListNode reverseBetween(ListNode head, int m, int n) {
         ListNode dummy = new ListNode(0);
         dummy.next = head;
         head = dummy;
-        for (int i = 1; i < m; i ++){
-            if (head == null){
-                return null;
-            }
+        
+        for (int i = 0; i < m - 1; i ++){
             head = head.next;
         }
         
-        ListNode preM = head;
-        ListNode mNode = head.next;
-        ListNode mNodeNext = mNode.next;
+        ListNode preM = null;
+        ListNode mStart = null;
+        ListNode postN = null;
         
+        preM = head;
+        
+        ListNode reversed = reverse(head.next, n - m);
+        preM.next = reversed;
+        
+        return dummy.next;
+    }
+    
+    private ListNode reverse(ListNode head, int n){
         ListNode prev = null;
-        ListNode curr = mNode;
-        for (int i = m; i <= n; i ++){
-            ListNode temp = curr.next;
+        ListNode curr = null;
+        ListNode next = null;
+        
+        prev = head;
+        curr = head.next;
+        for (int i = 0; i < n; i ++){
+            next = curr.next;
             curr.next = prev;
             prev = curr;
-            curr = temp;
+            curr = next;
         }
         
-        mNode.next = curr;
-        preM.next = prev;
-        return dummy.next;
-        
+        head.next = curr;
+        return prev;
     }
 }
