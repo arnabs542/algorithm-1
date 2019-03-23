@@ -28,7 +28,7 @@
  => 回傳result 以判斷 </br>
  => 因為要找Lowest common ancestor (A, B的第一個共同祖先) </br>
  => only (LCA == null) 才算是答案
-* 474 Lowest Common Ancestor II (todo)
+* 474 Lowest Common Ancestor II - 題目提供parent tree node
 
 ===> path
 * 480 Binary Tree Paths
