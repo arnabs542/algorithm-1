@@ -19,7 +19,9 @@
 * 596 Minimum Subtree 
 * 97 Maximum Depth of Binary Tree 
 * 155 Minimum Depth of Binary Tree 
-* 93 Balanced Binary Tree 
+* 93 Balanced Binary Tree
+* 1181 Diameter of Binary Tree
+
 
 ===> LCA
 * 88 Lowest Common Ancestor of a Binary Tree
@@ -43,6 +45,8 @@
 * 453 Flatten Binary Tree to Linked List </br>
 => 紀錄最後一個點, 才能把right的部分接進來
 
+* 7 Serialize and Deserialize Binary Tree
+* 595 Binary Tree Longest Consecutive Sequence
 
 ## Binary Search Tree
 => left subtree contains only nodes smaller than root's key </br>
@@ -50,13 +54,13 @@
 => left subtree and right subtree are also binary search tree </br>
 => 利用特性取值
 
-* 902 Kth Smallest Element in a BST</br>
- => inorder traverse 先找到最小的 O(n) </br>
- => 計算經過的k 的個樹, 找到第k小的 O(k)</br>
- => O(n + k) </br>
- => To-Do: O(h + k)</br>
+*** 902 Kth Smallest Element in a BST</br>
+1. => inorder traverse 先找到最小的 O(n) </br>
+   => 計算經過的k 的個樹, 找到第k小的 O(k)</br>
+   => O(n + k) </br>
  
- 
+To-do:
+ => O(h + k)</br>
  
 * 95 Validate Binary Search Tree
  => recursion 傳入 lowerbound and upperbound
