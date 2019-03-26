@@ -1,6 +1,7 @@
 # DFS 
 ## Review
-136. Palindrome Partitioning; #33 #192
+136. Palindrome Partitioning; #33 #192 
+and permutation 底下全做
 
 ## DFS on Tree - inorder travesal
 用分治法解决二叉树问题的时间复杂度：O(二叉树节点个数 * 每个节点的计算时间)
