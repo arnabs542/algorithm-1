@@ -2,7 +2,10 @@
    time O(mn*4^k) 
    - k is the length of the string; 
    - mn for for loop and for the dfs method its 
-   - 4^k. Since the dfs method goes only as deep as the word length we have T(k)=4(T(k-1))=4*4T(k-2)=....=.. which will be 4^k. 
+   - 4^k. Since the dfs method goes only as deep as the word length we have T(k)=4(T(k-1))=4*4T(k-2)=....=.. which will be 4^k.
+   
+   Node: 
+   - 加入result後, 設TreeNode curr.word = null; 才不會重複加入
 */
 
 class TrieNode{
