@@ -1,4 +1,7 @@
 # Data Structure
+## Queue
+* 40 Implement Queue by Two Stacks
+
 ## PriorityQueue
 – 解决動態求最大/小值 </br>
 – 可以解决動態第K大/小问题 </br>
