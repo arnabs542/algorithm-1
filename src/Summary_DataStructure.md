@@ -42,7 +42,6 @@ K个数的中位数，需要知道第K/2小和第K/2大 </br>
 * .last() O(1)
 
 * 360 Sliding Window Median
-
 * 364 Trapping Rain Water II
 
 ## Deque (Double-ended queue)
@@ -63,6 +62,7 @@ K个数的中位数，需要知道第K/2小和第K/2大 </br>
 * iterative DFS
 
 * 423 Valid Parentheses
+* 12 Min Stack
 
 ### Monotone Stack
 - 单调栈专门解决找一个值左/右第一个比它大/小的值 </br>
@@ -74,18 +74,13 @@ K个数的中位数，需要知道第K/2小和第K/2大 </br>
 * 510 Maximal Rectangle </br>
 => 變成2D的122 
 
-* 126 Max Tree (To-Do)
-
-
 ## Trie
 O(L) // L: word length
 ``` java
 ```
 * 422 Implement Trie
 * 473 Add and Search Word - Data structure design
-
 * 1090 Map Sum Pairs (Trie + HashMap)
-
 
 ## Hash
 * 128 Hash Function
