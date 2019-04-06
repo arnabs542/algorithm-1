@@ -1,5 +1,6 @@
 # Data Structure
 ## Queue
+* BFS
 * 40 Implement Queue by Two Stacks
 
 ## PriorityQueue
@@ -7,10 +8,9 @@
 – 可以解决動態第K大/小问题 </br>
 – 双堆可以解决動態中位数 </br>
 
-* offer O(logn)
+* offer O(logk) // k: the size of queue
 * top/peek O(1)
-* poll O(logn) 
-* BFS
+* poll O(logk) 
 
 ``` java
 private Comparator<Integer> compareMaxQ = new Comparator<Integer>(){
