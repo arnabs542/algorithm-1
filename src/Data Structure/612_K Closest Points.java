@@ -1,3 +1,5 @@
+// O(nlogk)
+
 /**
  * Definition for a point.
  * class Point {
