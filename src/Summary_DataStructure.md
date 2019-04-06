@@ -65,6 +65,7 @@ K个数的中位数，需要知道第K/2小和第K/2大 </br>
 * 12 Min Stack
 
 ### Monotone Stack
+http://www.cnblogs.com/grandyang/p/8887985.html
 - 单调栈专门解决找一个值左/右第一个比它大/小的值 </br>
 - 线性时间复杂度 </br>
 
@@ -95,6 +96,7 @@ https://www.jiuzhang.com/solutions/insert-delete-getrandom-o1-duplicates-allowed
 
 DataStream questions
 https://www.lintcode.com/problem/?tag=data-stream
+
 
 
 
