@@ -1,4 +1,4 @@
-// O(n * n)
+// O(n)
 
 public class Solution {
     /**
