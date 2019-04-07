@@ -9,51 +9,48 @@
  *     }
  * }
  */
+class Result{
+    public int count;
+    public int sum;
+    public Result(int c, int s){
+        this.count = c;
+        this.sum = s;
+    }
+}
 public class Solution {
     /**
-     * @param root the root of binary tree
-     * @return the root of the maximum average of subtree
+     * @param root: the root of binary tree
+     * @return: the root of the maximum average of subtree
      */
-     
-    private class Result {
-        public int result_sum;
-        public int result_size;
-        public Result(int sum, int size){
-            this.result_sum = sum;
-            this.result_size = size;
-        }
-    }
-    
-    private TreeNode subtree = null;
-    private Result subtreeResult = null;
-    
+    // define average
+    private double maxAvg = (double)Integer.MIN_VALUE;
+    private TreeNode r = null;
     public TreeNode findSubtree2(TreeNode root) {
-        helper(root);
-        return subtree;
+        if (root == null){
+            return null;
+        }
+                System.out.println(maxAvg);
+
+        getMaxAvg(root);
+        
+        return r;
     }
     
-    public Result helper(TreeNode root){
+    private Result getMaxAvg(TreeNode root){
         if (root == null){
             return new Result(0, 0);
         }
         
-        Result resultL = helper(root.left);
-        Result resultR = helper(root.right);
-        Result resultRoot = new Result(
-            resultL.result_sum + resultR.result_sum + root.val,
-            resultL.result_size + resultR.result_size + 1
-            );
-        
-        if (subtree == null || 
-            // subtreeResult.result_sum / subtreeResult.result_size < 
-            // resultRoot.result_sum / resultRoot.result_sum
-            subtreeResult.result_sum * resultRoot.result_size < 
-            resultRoot.result_sum * subtreeResult.result_size
-            ){
-            subtree = root;
-            subtreeResult = resultRoot;
+        Result l_result = getMaxAvg(root.left);
+        Result r_result = getMaxAvg(root.right);
+        int sum = root.val + l_result.sum + r_result.sum;
+        int count = 1 + l_result.count + r_result.count;
+        double avg = (double) sum / count;
+
+        if (avg > maxAvg){
+            maxAvg = avg;
+            r = root;
         }
-        
-        return resultRoot;
+        return new Result(count, sum);
     }
 }
