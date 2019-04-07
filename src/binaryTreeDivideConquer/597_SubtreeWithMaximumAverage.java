@@ -29,10 +29,7 @@ public class Solution {
         if (root == null){
             return null;
         }
-                System.out.println(maxAvg);
-
         getMaxAvg(root);
-        
         return r;
     }
     
