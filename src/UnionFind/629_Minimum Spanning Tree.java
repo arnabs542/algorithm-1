@@ -31,7 +31,7 @@ public class Solution {
     
     HashMap<String, String> root = new HashMap<>(); 
     public List<Connection> lowestCost(List<Connection> connections) {
-        /* 1. sort connection cost O(logn) // n: # of connections
+        /* 1. sort connection cost O(nlogn) // n: # of connections
            2. initialize union find, set hashmap to store city, and its father
            3. loop through sorted connection cost // O(nlogn) // pq.poll(logn)
               if (city a and city b is connected) => continue; 
