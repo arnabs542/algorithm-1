@@ -1,4 +1,5 @@
-//O(nlogn)
+// O(nlogn)
+// O(nlogn) .... n is the number of connection 
 /**
  * Definition for a Connection.
  * public class Connection {
