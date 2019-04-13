@@ -65,61 +65,137 @@ public class NumberofIslands {
     }
 }
 
+//// DFS
+// O(R * C)
+// R: the number of rows
+// C: the number of columns
+class Solution {
+    private int[] rowDelta = {0, 0, 1, -1};
+    private int[] colDelta = {1, -1, 0, 0};
 
-
-class Coordinate{
-    int x;
-    int y;
-    boolean island;
-    
-    public Coordinate(int x, int y){
-        this.x = x;
-        this.y = y;
-    }
-}
-
-public class Solution {
-    /**
-     * @param grid: a boolean 2D matrix
-     * @return: an integer
-     */
-    public int numIslands(boolean[][] grid) {
-        int numIslands = 0;
-        
-        for (int i = 0; i < grid.length; i ++){
+    public int numIslands(char[][] grid) {
+        if (grid == null || grid.length == 0 || grid[0].length == 0){
+            return 0;
+        }
+        int count = 0;
+        for (int i = 0; i < grid.length; i ++){ 
             for (int j = 0; j < grid[i].length; j ++){
-                if (grid[i][j]){
-                    BFS(grid, new Coordinate(i, j));
-                    numIslands ++;
+                if (grid[i][j] == '1'){
+                    
+                    DFS(grid, i, j);
+                    count ++;
                 }
             }
         }
         
-        return numIslands;
+        return count;
     }
     
-    private void BFS(boolean[][] grid, Coordinate thisIsland){
-        Queue<Coordinate> q = new LinkedList<Coordinate>();
-        q.offer(thisIsland);
-        while(!q.isEmpty()){
-            Coordinate c = q.poll();
-            if (c.x + 1 < grid.length && grid[c.x + 1][c.y]){
-                grid[c.x + 1][c.y] = false;
-                q.offer(new Coordinate(c.x + 1, c.y));
+    private void DFS(char[][] grid,
+                    int row,
+                    int col){
+        
+        if (grid[row][col] == '0'){
+            return;
+        }
+        
+        grid[row][col] = '0';
+        for (int i = 0; i < 4; i ++){
+            int newR = row + rowDelta[i];
+            if (newR < 0 || newR > grid.length - 1){
+                continue;
             }
-            if (c.x - 1 >= 0 && grid[c.x - 1][c.y]){
-                grid[c.x - 1][c.y] = false;
-                q.offer(new Coordinate(c.x - 1, c.y));
+            
+            int newC = col + colDelta[i];
+            if (newC < 0 || newC > grid[0].length - 1){
+                continue;
             }
-            if (c.y + 1 < grid[0].length && grid[c.x][c.y + 1]){
-                grid[c.x][c.y + 1] = false;
-                q.offer(new Coordinate(c.x, c.y + 1));
+            
+            if (grid[newR][newC] == '0'){
+                continue;
             }
-            if (c.y - 1 >= 0 && grid[c.x][c.y - 1]){
-                grid[c.x][c.y - 1] = false;
-                q.offer(new Coordinate(c.x, c.y - 1));
-            }
+            
+            DFS(grid, newR, newC);
+        }
+    }
+}
+
+//// Union find
+class Solution {
+    private void union(int a, int b){
+        int root_a = findRoot(a);
+        int root_b = findRoot(b);
+        if (root_a != root_b){
+            hm.put(root_a, root_b);
         }
     }
     
+    private int findRoot(int a){
+        if (hm.get(a) == a){
+            return a;
+        }
+        
+        int target = a;
+        while (hm.get(target) != target){
+            target = hm.get(target);
+        }
+        
+        int root = target;
+        while (hm.get(a) != target){
+            int temp = hm.get(a);
+            hm.put(a, target);
+            a = temp;
+        }
+        
+        return root;
+    }
+    
+    int islandCount = 0;
+    HashMap<Integer, Integer> hm = new HashMap<Integer, Integer>();
+    public int numIslands(char[][] grid) {
+        if (grid == null || grid.length == 0 || grid[0].length == 0){
+            return 0;
+        }
+        
+        int rCount = grid.length;
+        int cCount = grid[0].length;
+        // 1. create a hashmap to store island and its father mapping
+        // map all the island to its father at beggining;
+        for (int i = 0; i < rCount; i ++){
+            for (int j = 0; j < cCount; j ++){
+                if (grid[i][j] == '1'){
+                    int coordinate = i * rCount + j;
+                    hm.put(coordinate, coordinate);
+                }
+            }   
+        }
+            
+        // 2. loop through all the nodes
+        for (int i = 0; i < rCount; i ++){
+            for (int j = 0; j < cCount; j ++){
+                if (grid[i][j] == '1'){
+                    // if the island have adjunction 1, union it
+                    if (i + 1 < rCount && grid[i + 1][j] == '1'){
+                        union(i * rCount + j, (i + 1) * rCount + j);
+                    }
+                    
+                    if (j + 1 < cCount && grid[i][j + 1] == '1'){
+                        union(i * rCount + j, i * rCount + j + 1);
+                    }
+                }
+            }   
+        }
+        
+        HashSet<Integer> result = new HashSet<Integer>();
+        for (int i : hm.keySet()){
+            if (i == hm.get(i)){
+                result.add(i);
+            }
+        }
+        
+        return result.size();
+    }
+    
+
 }
+
