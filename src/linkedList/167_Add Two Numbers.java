@@ -1,3 +1,4 @@
+//// 注意: 最後如果還是有進位, 要加上最後一個linked list
 /**
  * Definition for ListNode
  * public class ListNode {
