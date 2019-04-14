@@ -1,3 +1,6 @@
+// Time: O(1)
+// Space: O(capacity)
+
 // solution 1: insert to last
 public class LRUCache {
 
