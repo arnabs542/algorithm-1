@@ -1,3 +1,6 @@
+// time complexity: O(log(x));
+// space: O(1);
+
 public class Solution {
     /*
      * @param n: the integer to be reversed
