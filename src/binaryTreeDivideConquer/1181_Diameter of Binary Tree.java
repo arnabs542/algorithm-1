@@ -1,36 +1,31 @@
 /**
- * Definition of TreeNode:
+ * Definition for a binary tree node.
  * public class TreeNode {
- *     public int val;
- *     public TreeNode left, right;
- *     public TreeNode(int val) {
- *         this.val = val;
- *         this.left = this.right = null;
- *     }
+ *     int val;
+ *     TreeNode left;
+ *     TreeNode right;
+ *     TreeNode(int x) { val = x; }
  * }
  */
-
-public class Solution {
-    /**
-     * @param root: a root of binary tree
-     * @return: return a integer
-     */
+// 不一定要經過樹根
+class Solution {
     public int diameterOfBinaryTree(TreeNode root) {
         if (root == null){
             return 0;
         }
-        
-        int depthL = maxDepth(root.left);
-        int depthR = maxDepth(root.right);
-
-        return depthL + depthR; 
+        maxDepth(root);
+        return max;
     }
     
+    private int max = Integer.MIN_VALUE;
     private int maxDepth(TreeNode root){
         if (root == null){
             return 0;
         }
         
-        return Math.max(maxDepth(root.left), maxDepth(root.right)) + 1;
+        int maxL = maxDepth(root.left);
+        int maxR = maxDepth(root.right);
+        max = Math.max(max, maxL + maxR);
+        return Math.max(maxL, maxR) + 1;
     }
 }
