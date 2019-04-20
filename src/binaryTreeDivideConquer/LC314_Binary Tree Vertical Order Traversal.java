@@ -1,3 +1,7 @@
+// sol 1. treemap O(n * logn)
+// sol 2. maintain global min, and global max,
+//        loop through min and max in hashmap key to add result
+
 /**
  * Definition for a binary tree node.
  * public class TreeNode {
