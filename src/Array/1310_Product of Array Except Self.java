@@ -23,3 +23,38 @@ public class Solution {
         return result;
     }
 }
+
+// O(2n)
+class Solution {
+    public int[] productExceptSelf(int[] nums) {
+        int[] productR = new int[nums.length];
+        
+        for (int j = nums.length - 1; j >= 0; j --){
+            if (j == nums.length - 1){
+                productR[j] = nums[j];
+            } else{
+                productR[j] = productR[j + 1] * nums[j];
+            }
+        }
+        
+        int[] result = new int[nums.length];
+        int productL = 1;
+        for (int i = 0; i < nums.length; i ++){
+            if (i == 0){
+                result[i] = productR[i + 1];
+            } else if (i == nums.length - 1){
+                result[i] = productL;
+            } else {
+                result[i] = productL * productR[i + 1];
+            }
+            
+            productL = productL * nums[i];
+        }
+        
+        return result;
+    }
+    
+    // [1, 2, 3, 4]
+    // [24, 12, 8 ,6 ]
+    
+}
