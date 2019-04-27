@@ -72,3 +72,33 @@ class Solution {
         return stack.isEmpty();
     }
 }
+
+
+// 
+class Solution {
+    public List<String> generateParenthesis(int n) {
+        List<String> result = new ArrayList<>();
+        getParent(0, 0, n, "", result);
+        return result;
+    }
+    
+    private void getParent(int left
+                        , int right
+                        , int n
+                        , String curr
+                        , List<String> result){
+        
+        if (left == n && right == n){
+            result.add(new String(curr));
+            return;
+        }
+        
+        if (left < n){
+            getParent(left + 1, right, n, curr + '(', result);
+        }
+        
+        if (right < left){
+            getParent(left, right + 1, n, curr + ')', result);
+        }
+    }
+}
