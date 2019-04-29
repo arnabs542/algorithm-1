@@ -1,3 +1,5 @@
+// Time: O(N)
+
 /*
 // Definition for a Node.
 class Node {
