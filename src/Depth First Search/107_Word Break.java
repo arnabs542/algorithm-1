@@ -45,3 +45,44 @@ class Solution {
         return false;
     }
 }
+
+
+
+class Solution {
+    Set<String> dict = new HashSet<String>();
+    HashMap<String, Boolean> memo = new HashMap<>();
+    public boolean wordBreak(String s, List<String> wordDict) {
+        for (String word: wordDict){
+            dict.add(word);
+        }
+        return DFS(s);
+    }
+    
+    private boolean DFS(String s){
+        if (dict.contains(s)){
+            memo.put(s, true);
+            return true;
+        }
+        
+        if (memo.containsKey(s)){
+            return memo.get(s);
+        }
+        
+        for (int i = 1; i < s.length(); i ++){
+            String left = s.substring(0, i);
+            String right = s.substring(i);
+            if (!dict.contains(left)){
+                continue;
+            } 
+            
+            boolean isRight = DFS(right);
+            memo.put(right, isRight);
+            if (isRight){
+                return true;
+            }
+        }
+        
+        memo.put(s, false);
+        return false;
+    }
+}
