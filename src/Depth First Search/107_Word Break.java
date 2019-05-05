@@ -1,48 +1,47 @@
-public class Solution {
-    /*
-     * @param s: A string
-     * @param dict: A dictionary of words dict
-     * @return: A boolean
-     */
-    public boolean wordBreak(String s, Set<String> dict) {
-        if (s.equals("") && dict.size() == 0){
-            return true;
+class Solution {
+    HashSet<String> dict = new HashSet<String>();
+    HashMap<String, Boolean> memo = new HashMap<String, Boolean>();
+    public boolean wordBreak(String s, List<String> wordDict) {
+        for (String word: wordDict){
+            dict.add(word);
         }
-        Map<String, Boolean> memo = new HashMap<>();
-        boolean result = helper(s, memo, dict);
-        System.out.println(memo);
-        return result;
+        
+        return helper(s);
+        
+        
     }
     
-    private boolean helper(String s,
-                        Map<String, Boolean> memo,
-                        Set<String> dict){
-
+    private boolean helper(String s){
         if (dict.contains(s)){
             return true;
         }
         
         if (memo.containsKey(s)){
-            return true;
+            return memo.get(s);
         }
         
-        for (int i = 0; i < s.length(); i++){
-            // 看看右邊是不是在字典中
-            String sRight = s.substring(i);
-            
-            if (!dict.contains(sRight)){
+        for (int i = 0; i < s.length(); i ++){
+            //看右邊是不是在字典中
+            String right = s.substring(i);
+            if (dict.contains(right)){
+                memo.put(right, true);
+            } else {
+                memo.put(right, false);
                 continue;
             }
             
-            // 看看左邊
-            String sLeft = s.substring(0, i);
-            boolean leftInDict = helper(sLeft, memo, dict);
-            if (i == 0 || leftInDict){
-                memo.put(s, true);
+            //看左邊是不是在字典中
+            String left = s.substring(0, i);
+            boolean isLeft = helper(left);
+        
+            memo.put(left, isLeft);
+            if (i == 0 || isLeft){
+                memo.put(s, true);  
                 return true;
-            }
+            } 
         }
         
+        memo.put(s, false);
         return false;
     }
 }
