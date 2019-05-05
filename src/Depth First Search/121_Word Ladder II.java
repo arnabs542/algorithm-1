@@ -8,7 +8,8 @@
 Word Ladder 1 只需要找出最短路徑的步數, 
 使用visited array, 如果有兩個字都走到同一個字 ted -> tex, rex -> tex, 只會計算其中一條, 另一條路因為tex已經visited, 會被忽略不計
 Wod Ladder 2 需要印出所有最小路徑 => both tex -> tex, rex -> text
-使用stepCount<word, count>, 第一次使用加入stepCount, DFS加入stepCount為下一步的字
+使用stepCount<word, count>, 第一次使用加入stepCount (因為只需要最小路徑)
+DFS加入stepCount為下一步的字
 */
 
 public class Solution {
