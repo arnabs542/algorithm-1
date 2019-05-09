@@ -2,37 +2,45 @@
 // inorder: left, Root, right
 // recursive O(N)
 
+/**
+ * Definition for a binary tree node.
+ * public class TreeNode {
+ *     int val;
+ *     TreeNode left;
+ *     TreeNode right;
+ *     TreeNode(int x) { val = x; }
+ * }
+ */
 class Solution {
+    HashMap<Integer, Integer> inorderMap = new HashMap<>();
+
     public TreeNode buildTree(int[] preorder, int[] inorder) {
-        if (preorder.length != inorder.length){
+        if (preorder.length != inorder.length || preorder.length == 0){
             return null;
         }
-        return buildTree(preorder, 0, preorder.length - 1, inorder, 0, inorder.length - 1);
+        
+        for (int i = 0; i < inorder.length; i ++){
+            inorderMap.put(inorder[i], i);
+        }
+        
+        return traverse(preorder, 0, preorder.length -1
+                ,inorder, 0, inorder.length - 1);
     }
     
-    private TreeNode buildTree(int[] preorder, int preStart, int preEnd
-                               , int[] inorder, int inStart, int inEnd){
-        if (inStart > inEnd){
+    private TreeNode traverse(int[] preorder, int startPre, int endPre,
+                             int[] inorder, int startIn, int endIn){
+        if (endIn < startIn || startPre > endPre){
             return null;
         }
-        int rootIndex = findRootInorder(inorder, preorder[preStart]);
-        TreeNode root = new TreeNode(preorder[preStart]);
-        root.left = buildTree(preorder, preStart + 1, preStart + rootIndex - inStart
-                             , inorder, inStart, rootIndex - 1);
-        root.right = buildTree(preorder, preStart + rootIndex - inStart + 1, preEnd
-                             , inorder, rootIndex + 1, inEnd);
+        
+        TreeNode root = new TreeNode(preorder[startPre]);
+        int index = inorderMap.get(preorder[startPre]);
+        root.left = traverse(preorder, startPre + 1, startPre + index - startIn,
+                            inorder, startIn, index - 1);
+        root.right = traverse(preorder, startPre + index - startIn + 1, endPre,
+                            inorder, index + 1, endIn);
         
         return root;
-    }
-    
-    private int findRootInorder(int[] inorder, int target){
-        for (int i = 0; i < inorder.length; i ++){
-            if (inorder[i] == target){
-                return i;
-            }
-        }
-        
-        return -1;
     }
 }
 
