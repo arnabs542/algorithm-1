@@ -37,3 +37,40 @@ public class Solution {
         return Math.max(leftDepth, rightDepth) + 1;
     }
 }
+
+
+
+/**
+ * Definition for a binary tree node.
+ * public class TreeNode {
+ *     int val;
+ *     TreeNode left;
+ *     TreeNode right;
+ *     TreeNode(int x) { val = x; }
+ * }
+ */
+class Solution {
+    public int maxDepth(TreeNode root) {
+        if (root == null){
+            return 0;
+        }
+        helper(root, 0);
+        return maxDepth;
+    }
+    
+    private int maxDepth = Integer.MIN_VALUE;
+    private void helper(TreeNode root, int step){
+        if (root == null){
+            return;
+        }
+        
+        step ++;
+        if (root.left == null && root.right == null){
+            maxDepth = Math.max(maxDepth, step);
+            return;
+        }
+        
+        helper(root.left, step);
+        helper(root.right, step);
+    }
+}
