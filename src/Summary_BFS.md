@@ -122,6 +122,7 @@ while(!q.isEmpty()){
 
 return result;
 ```
+* O(N + E) 
 Topoligical Order的四種問法
 * 求任意1个拓扑序（Topological Order）
 * 问是否存在拓扑序（是否可以被拓扑排序）=> 輸入的數目和排序出結果數目相同
