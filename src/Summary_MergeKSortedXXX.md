@@ -23,7 +23,7 @@ n = A1.length + A2.length
 ```
 ## Merge k sorted Array/List/Intervals O(nlog(k)) 
 * 486 Merge K Sorted Arrays
-* 104 Merge K Sorted Lists
+* 104 Merge K Sorted Lists => divide/conquer
 * 839 Merge Two Sorted Interval Lists
 
 
