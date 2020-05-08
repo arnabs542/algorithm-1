@@ -1,3 +1,5 @@
+// O(2^n) exponential
+
 class Solution {
     public int fib(int N) {
         int[] memo = new int[N + 1];
