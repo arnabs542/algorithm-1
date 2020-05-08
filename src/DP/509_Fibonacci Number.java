@@ -1,5 +1,5 @@
-// O(2^n) exponential
-
+// without meomrization: O(2^n) exponential
+// with memo: Time complexity: O(2N)
 class Solution {
     public int fib(int N) {
         int[] memo = new int[N + 1];
