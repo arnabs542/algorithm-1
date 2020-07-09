@@ -20,20 +20,20 @@ public int getNth(int num){
 	result[1] = 1;
 	for (int i = 2; i <num; i ++){
 		result[i] = result[i - 1] + result[i - 2];
-}
+	}
 
-return result[num - 1];
+	return result[num - 1];
 }
 
 
 public int getNth(int num){
 	if (num == 1){
 	    return 0;
-}
-
- if (num == 2){
-return 1;
-}
+	}
+	
+	if (num == 2){
+		return 1;
+	}
     
 	return getNth(num - 2) + getNth(num - 1);
 }
