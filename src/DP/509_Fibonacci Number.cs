@@ -14,7 +14,7 @@ The first ten numbers in Fibonacci sequence is:
 // num = 4 => 2
 // num = 5 => 3
 
-// iterative way
+// iterative way O(n)
 public int getNth(int num){
 	int[] result = new int[num];
 	result[0] = 0;
@@ -55,7 +55,7 @@ public int getNth(int num){
     }
 */
 
-// recursive 
+// recursive O(2 ^ n)
 public int fibonacci(int num) {
         if (num == 1){
             return 0;
