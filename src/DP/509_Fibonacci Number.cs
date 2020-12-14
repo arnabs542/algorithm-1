@@ -55,6 +55,27 @@ public int getNth(int num){
     }
 */
 
+/*
+	int a, b, temp;
+        a = 0;
+        b = 1;
+        
+        if (num == 1){
+            return a;
+        }
+        if (num == 2){
+            return b;
+        }
+        while (num > 2){
+            temp = a;
+            a = b;
+            b = temp + a;
+            num --;
+        }
+        
+        return b;
+*/
+
 // recursive O(2 ^ n)
 public int fibonacci(int num) {
         if (num == 1){
